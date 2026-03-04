@@ -19,42 +19,35 @@ classifiers = [
 
 dependencies = [
     # Web Framework
-    "fastapi>=0.109.0",
+    "fastapi[standard]>=0.109.0",
     "uvicorn[standard]>=0.27.0",
-    
     # Data Validation
     "pydantic>=2.5.0",
     "pydantic-settings>=2.1.0",
-    
     # Authentication & Security
     "python-jose[cryptography]>=3.3.0",
     "passlib[bcrypt]>=1.7.4",
     "python-multipart>=0.0.6",
-    
     # Database
     "sqlalchemy>=2.0.25",
     "psycopg2-binary>=2.9.9",
     "alembic>=1.13.0",
-    
     # Cache
     "redis>=5.0.1",
-    
     # Machine Learning
     "xgboost>=2.0.3",
     "prophet>=1.1.5",
     "scikit-learn>=1.4.0",
-    
     # Data Processing
     "pandas>=2.2.0",
     "numpy>=1.26.3",
-    
     # HTTP Requests & Web Scraping
     "requests>=2.31.0",
     "beautifulsoup4>=4.12.3",
     "httpx>=0.26.0",
-    
     # Configuration
     "python-dotenv>=1.0.0",
+    "bcrypt==3.2.2",
 ]
 
 [project.optional-dependencies]
