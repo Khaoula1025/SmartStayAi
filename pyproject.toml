@@ -48,6 +48,7 @@ dependencies = [
     # Configuration
     "python-dotenv>=1.0.0",
     "bcrypt==3.2.2",
+    "openpyxl>=3.1.5",
 ]
 
 [project.optional-dependencies]
