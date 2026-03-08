@@ -1,18 +1,3 @@
-"""
-SmartStay Intelligence — Hickstead Hotel
-Script 01: Clean Occupancy Data (2024 + 2025)
-
-Input files:
-  - UNOHICK_Occupancy_20260227_235408.xlsx  (2024 full year)
-  - UNOHICK_Occupancy_20260227_235324.xlsx  (2025 full year)
-
-Output:
-  - clean_occupancy.csv  (433+ rows, one per day)
-
-Run:
-  python 01_clean_occupancy.py
-"""
-
 import pandas as pd
 
 # ─────────────────────────────────────────────────────────────────────────────
