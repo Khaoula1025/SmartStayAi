@@ -10,6 +10,8 @@ OUTPUT     = 'data/processed/clean_day_by_day.csv'
 print("=" * 55)
 print("SmartStay — Script 02: Clean Day-by-Day Budget Split")
 print("=" * 55)
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 # STEP 1 — PARSE
 # Real header is at row 2 (rows 0 and 1 are merged title rows).
@@ -132,16 +134,24 @@ for col in ['b_occ', 'b_adr', 'b_rns', 'b_rev']:
 
 # ─────────────────────────────────────────────────────────────────────────────
 # STEP 4 — VALIDATE OCC FORMAT
-# h_occ and cs_occ should already be decimals (0–1).
-# If any value > 1, it was stored as percentage — divide by 100.
+# All three occ columns are stored as decimals (0–1) in the source file.
+# The ONLY exception is h_occ on Jun 25 2025 = 1.019 (53 rooms / 52 capacity)
+# — a genuine overbooking night, not a percentage encoding.
+#
+# WRONG approach: if any(>1) → divide whole column by 100
+#   This turns 0.19 → 0.0019 for every row just because of one edge case.
+#
+# CORRECT approach: clip at 1.0 to cap the single overbooking row.
 # ─────────────────────────────────────────────────────────────────────────────
 
 print("\n[4/6] Validating occupancy format (should be 0–1 decimal)...")
 for col in ['h_occ', 'cs_occ', 'b_occ']:
-    if (df[col] > 1).any():
-        count = (df[col] > 1).sum()
-        df[col] = df[col] / 100
-        print(f"      {col}: converted {count} values from % to decimal")
+    over1 = (df[col] > 1).sum()
+    # Values slightly above 1 are genuine overbooking nights — cap to 1.0
+    # Do NOT divide by 100: all columns are already stored as fractions in source
+    if over1 > 0:
+        df[col] = df[col].clip(upper=1.0)
+        print(f"      {col}: capped {over1} overbooking value(s) to 1.0")
     else:
         print(f"      {col}: already decimal format ✅")
 

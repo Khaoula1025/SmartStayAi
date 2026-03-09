@@ -7,7 +7,7 @@ warnings.filterwarnings('ignore')
 # CONFIG
 # ─────────────────────────────────────────────────────────────────────────────
 FILE_INPUT   = 'data/raw/Uno Hotels Pickup. 27.02.2026.xlsx'
-OUTPUT       = 'data/processed//clean_pickup.csv'
+OUTPUT       = 'data/processed/clean_pickup.csv'
 HOTEL_CAP    = 52      # Hickstead total rooms
 EXTRACT_DATE = '2026-02-27'
 
