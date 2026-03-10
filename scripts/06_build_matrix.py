@@ -7,9 +7,10 @@ import re
 # ─────────────────────────────────────────────────────────────────────────────
 CLEAN_DIR    = 'data/processed'
 EVENTS_FILE  = 'data/raw/Special Events.xlsx'
+PICKUP_FILE  = 'data/raw/Uno Hotels Pickup. 27.02.2026.xlsx'
 
-OUT_TRAINING   = 'data/processed/training_matrix_2.csv'
-OUT_PREDICTION = 'data/processed/prediction_matrix_2.csv'
+OUT_TRAINING   = 'data/processed/training_matrix.csv'
+OUT_PREDICTION = 'data/processed/prediction_matrix.csv'
 
 print("=" * 60)
 print("SmartStay — Script 06: Build Training & Prediction Matrix")
@@ -84,6 +85,41 @@ print(f"      {len(local_event_dates)} local event dates "
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+# STEP 2b — LOAD 2025 STLY ACTUALS FROM FcstBud  [FIX 6]
+# The FcstBud sheet in the Feb 27 2026 pickup file maps each 2026 date (DateTY)
+# to the same-DOW 2025 actual (DateLY, LYrms, LYrev, LYadr).
+# We use DateLY as the join key to add stly_sold/stly_rev to Zone A training rows.
+# This aligns training features with prediction: both zones now carry stly signals.
+# Validation: mean room diff vs clean_occupancy = 0.03, max = 2. ✅
+# Coverage: 342 / 364 Zone A rows (remaining 22 fall after Dec 9 2025,
+# the end of the FcstBud LY window). Zone B (2024) stays NaN — no 2024 STLY file.
+# ─────────────────────────────────────────────────────────────────────────────
+
+print("\n[2b/9] Loading 2025 daily actuals from FcstBud (stly source for Zone A)...")
+
+_xl27     = pd.ExcelFile(PICKUP_FILE)
+_fcst_raw = _xl27.parse('FcstBud', header=0, dtype=str)
+_fcst_h   = _fcst_raw[
+    _fcst_raw['Hotel'].astype(str).str.contains('Hickstead', case=False, na=False)
+].copy()
+_fcst_h['DateLY'] = pd.to_datetime(_fcst_h['DateLY'], errors='coerce')
+_fcst_h['LYrms']  = pd.to_numeric(_fcst_h['LYrms'],  errors='coerce')
+_fcst_h['LYrev']  = pd.to_numeric(_fcst_h['LYrev'],  errors='coerce')
+_fcst_h['LYadr']  = pd.to_numeric(_fcst_h['LYadr'],  errors='coerce')
+
+stly_lookup = (
+    _fcst_h[_fcst_h['DateLY'].notna() & (_fcst_h['LYrms'] > 0)]
+    [['DateLY', 'LYrms', 'LYrev', 'LYadr']]
+    .rename(columns={'DateLY': 'date', 'LYrms': 'stly_sold',
+                     'LYrev':  'stly_rev', 'LYadr': 'stly_adr'})
+    .drop_duplicates('date')
+    .copy()
+)
+print(f"      stly_lookup: {len(stly_lookup)} dates "
+      f"({stly_lookup['date'].min().date()} → {stly_lookup['date'].max().date()})")
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # STEP 3 — PREPARE COLUMN SUBSETS
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -146,7 +182,12 @@ for col in ['cs_occ', 'cs_adr', 'h_adr', 'cs_revpar_2025', 'b_occ', 'b_adr']:
         print(f"      Imputed {null_mask.sum()} missing {col} in Zone A via DOW median")
 
 zone_a['is_local_event'] = zone_a['date'].isin(local_event_dates).astype(int)
-print(f"      {len(zone_a)} rows | occupancy + bookingcom + day_by_day + fit + events")
+
+# FIX 6 — join stly_sold / stly_rev / stly_adr from FcstBud lookup
+zone_a = zone_a.merge(stly_lookup, on='date', how='left')
+stly_filled = zone_a['stly_sold'].notna().sum()
+print(f"      FIX 6: stly_sold filled for {stly_filled}/{len(zone_a)} Zone A rows ✅")
+print(f"      {len(zone_a)} rows | occupancy + bookingcom + day_by_day + fit + events + stly")
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -196,7 +237,9 @@ zone_b['is_bank_holiday']     = zone_b['date'].isin(ENGLAND_BH_2024).astype(int)
 zone_b['is_cultural_holiday'] = zone_b['date'].isin(CULTURAL_2024).astype(int)
 
 # b_occ / b_adr are 2026-only targets — not applicable to 2024 rows
-for col in ['b_occ', 'b_adr', 'b_rns', 'b_rev', 'budget_occ_gap', 'budget_adr_gap']:
+# stly_sold / stly_rev NaN for Zone B — no 2023 STLY file available
+for col in ['b_occ', 'b_adr', 'b_rns', 'b_rev', 'budget_occ_gap', 'budget_adr_gap',
+            'stly_sold', 'stly_rev', 'stly_adr']:
     zone_b[col] = np.nan
 
 zone_b['is_local_event'] = zone_b['date'].isin(local_event_dates).astype(int)
@@ -318,6 +361,8 @@ training_cols = [
     'is_bank_holiday', 'is_cultural_holiday', 'is_local_event',
     # Budget targets (DOW-matched 2026 targets — 363/364 Zone A rows; NaN for Zone B)
     'b_occ', 'b_adr',
+    # FIX 6 — STLY actuals from FcstBud (342/364 Zone A rows; NaN for Zone B)
+    'stly_sold', 'stly_rev', 'stly_adr',
 ]
 training_cols = [c for c in training_cols if c in training.columns]
 training[training_cols].to_csv(OUT_TRAINING, index=False)
@@ -415,6 +460,10 @@ check("FIX 4: stly_rev present in prediction",
       'stly_rev' in pr.columns and pr['stly_rev'].notna().all())
 check("FIX 5: is_local_event in prediction with hits",
       'is_local_event' in pr.columns and pr['is_local_event'].sum() > 0)
+za = tr[tr['data_zone'] == 'A_2025_training']
+check("FIX 6: stly_sold present for Zone A training rows (>90%)",
+      za['stly_sold'].notna().mean() > 0.90,
+      f"Only {za['stly_sold'].notna().mean():.0%} filled")
 
 check("Prediction has 300+ rows", len(pr) >= 300)
 check("All prediction dates in 2026", (pr['date'].dt.year == 2026).all())
