@@ -1,0 +1,43 @@
+{
+  "model": "GradientBoosting (60%) + RandomForest (40%) ensemble",
+  "features": [
+    "month",
+    "dow",
+    "is_weekend",
+    "is_high_season",
+    "cs_occ",
+    "cs_adr",
+    "b_occ",
+    "b_adr",
+    "floor_price",
+    "is_bank_holiday",
+    "is_cultural_holiday",
+    "is_local_event",
+    "season"
+  ],
+  "n_training_rows": 638,
+  "n_prediction_rows": 307,
+  "cv_type": "seasonal_holdout_3_splits",
+  "cv_mae_all_folds": 0.1957,
+  "cv_mae_operational": 0.1196,
+  "cv_mae_pp": 11.96,
+  "cv_r2_mean": -1.475,
+  "occ_accuracy_pct": 88.0,
+  "note_apr_fold": "2024-Apr occ was 6.3% (hotel barely open), fold excluded from op MAE",
+  "stage2_regime": "moderate",
+  "feature_importances": {
+    "month": 0.3197,
+    "cs_adr": 0.1722,
+    "b_adr": 0.1515,
+    "season": 0.0996,
+    "b_occ": 0.0751,
+    "cs_occ": 0.0676,
+    "is_high_season": 0.042,
+    "dow": 0.0349,
+    "floor_price": 0.0321,
+    "is_bank_holiday": 0.0044,
+    "is_weekend": 0.0009,
+    "is_cultural_holiday": 0.0,
+    "is_local_event": 0.0
+  }
+}
