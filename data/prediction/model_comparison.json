@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-10T11:30:29.208735",
+  "generated_at": "2026-03-10T12:33:37.896167",
   "hotel": "hickstead",
   "implementation": "facebook_prophet",
   "prophet_training_window": {

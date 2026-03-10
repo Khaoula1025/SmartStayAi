@@ -28,9 +28,9 @@ import os
 from pathlib import Path
 
 # ── Project root ──────────────────────────────────────────────────────────────
-# Always resolves to the directory containing this file, regardless of where
-# Python is invoked from.
-ROOT = Path(__file__).resolve().parent
+# config.py lives in config/, so .parent gives config/ and .parent.parent gives
+# the actual project root (smartstay-intelligence/).
+ROOT = Path(__file__).resolve().parent.parent
 
 # ── Data directories ──────────────────────────────────────────────────────────
 RAW_DIR        = Path(os.getenv('RAW_DIR',        ROOT / 'data' / 'raw'))
@@ -65,9 +65,11 @@ CLEAN_FILES = {
 }
 
 # ── Matrix + prediction files (output of scripts 06-07b) ─────────────────────
+# training_matrix and prediction_matrix are written to PROCESSED_DIR by
+# 06_build_matrix.py; downstream predictions stay in PREDICTION_DIR.
 MATRIX_FILES = {
-    'training':         PREDICTION_DIR / 'training_matrix.csv',
-    'prediction':       PREDICTION_DIR / 'prediction_matrix.csv',
+    'training':         PROCESSED_DIR  / 'training_matrix.csv',
+    'prediction':       PROCESSED_DIR  / 'prediction_matrix.csv',
     'predictions_2026': PREDICTION_DIR / 'predictions_2026.csv',
     'prophet_preds':    PREDICTION_DIR / 'prophet_predictions.csv',
     'model_comparison': PREDICTION_DIR / 'model_comparison.json',
