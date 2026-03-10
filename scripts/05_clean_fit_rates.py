@@ -6,8 +6,8 @@ import re
 # CONFIG
 # ─────────────────────────────────────────────────────────────────────────────
 FILE_INPUT       = 'data/raw/FIT Static Final Rates 2025-2026.xlsx'
-OUTPUT_LOOKUP    = 'data/processed/clean_fit_rates.csv'
-OUTPUT_BY_DATE   = 'data/processed/clean_floor_by_date.csv'
+OUTPUT_LOOKUP    = 'data/processed/clean_fit_rates_1.csv'
+OUTPUT_BY_DATE   = 'data/processed/clean_floor_by_date_1.csv'
 
 DAYS_OF_WEEK = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 
