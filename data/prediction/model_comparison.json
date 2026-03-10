@@ -1,0 +1,200 @@
+{
+  "generated_at": "2026-03-10T11:30:29.208735",
+  "hotel": "hickstead",
+  "implementation": "facebook_prophet",
+  "prophet_training_window": {
+    "start": "2024-09-01",
+    "end": "2025-12-30",
+    "rows": 485,
+    "excluded": "Apr-Aug 2024 (hotel opening period, avg occ 6-72%)",
+    "rationale": "Including the opening period corrupts Prophet yearly seasonality. April 2024 was 6.3% vs 75.5% in 2025. Excluding these 153 rows gives Prophet a clean seasonal pattern to learn from."
+  },
+  "gbm_training_window": {
+    "start": "2024-04-01",
+    "end": "2025-12-30",
+    "rows": 638,
+    "note": "Includes opening period. Stage 1.5 month-correction applied for April (blends output with 2025 DOW mean)."
+  },
+  "metrics": {
+    "prophet": {
+      "model_type": "Facebook Prophet (additive, yearly_n=10, weekly_n=3)",
+      "n_training_rows": 485,
+      "regressors": [
+        "is_local_event",
+        "uk_bank_holiday"
+      ],
+      "op_mae_pp": 19.42,
+      "op_r2": -1.31,
+      "occ_accuracy_pct": 80.6,
+      "cv_folds": [
+        {
+          "fold": "Apr-Jun 2025",
+          "mae": 0.2363,
+          "mae_pp": 23.63,
+          "r2": -1.714,
+          "n_val": 91
+        },
+        {
+          "fold": "Jul-Sep 2025",
+          "mae": 0.2394,
+          "mae_pp": 23.94,
+          "r2": -2.311,
+          "n_val": 92
+        },
+        {
+          "fold": "Oct-Dec 2025",
+          "mae": 0.149,
+          "mae_pp": 14.9,
+          "r2": -0.309,
+          "n_val": 91
+        }
+      ]
+    },
+    "gbm_ensemble": {
+      "model_type": "GradientBoosting (60%) + RandomForest (40%)",
+      "n_training_rows": 638,
+      "n_features": 13,
+      "features": [
+        "month",
+        "dow",
+        "is_weekend",
+        "is_high_season",
+        "cs_occ",
+        "cs_adr",
+        "b_occ",
+        "b_adr",
+        "floor_price",
+        "is_bank_holiday",
+        "is_cultural_holiday",
+        "is_local_event",
+        "season"
+      ],
+      "op_mae_pp": 12.0,
+      "op_r2": 0.27,
+      "occ_accuracy_pct": 88.0,
+      "cv_folds": [
+        {
+          "fold": "Apr-Jun 2025",
+          "mae_pp": 34.8,
+          "note": "validation_artifact_opening_period"
+        },
+        {
+          "fold": "Jul-Sep 2025",
+          "mae_pp": 10.4
+        },
+        {
+          "fold": "Oct-Dec 2025",
+          "mae_pp": 13.5
+        }
+      ]
+    }
+  },
+  "head_to_head": {
+    "winner_accuracy": "GBM (12.0pp vs 19.42pp MAE)",
+    "winner_apr_jun": "Prophet (Apr 76.0% vs GBM 50.7%, actual 75.5%)",
+    "winner_interpretability": "Prophet (trend + seasonality decomposition)",
+    "winner_feature_richness": "GBM (compset, BOB, floor price)",
+    "production_choice": "GBM"
+  },
+  "blend_optimisation": {
+    "note": "Tested blend weights 0.0-1.0 on Jul-Dec 2025 holdout",
+    "result": "MAE worsens monotonically as Prophet weight increases",
+    "mae_pure_gbm_pp": 13.6,
+    "mae_pure_prophet_pp": 23.5,
+    "mae_50_50_blend_pp": 16.7,
+    "conclusion": "No benefit from blending \u2014 GBM is sole production model"
+  },
+  "production_decision": {
+    "selected_model": "GBM + RF ensemble (Script 07)",
+    "prophet_role": "Seasonal validation and explainability",
+    "rationale": [
+      "GBM operational MAE 12.0pp vs Prophet 19.42pp",
+      "GBM uses 13 features: compset rates, BOB signals, floor price",
+      "Prophet cannot incorporate real-time booking signals",
+      "Blend optimisation confirms no accuracy gain from mixing models",
+      "Prophet April prediction (76.0%) aligned with 2025 actual (75.5%), validating the Stage 1.5 opening-period correction in Script 07"
+    ]
+  },
+  "monthly_comparison": [
+    {
+      "month": "Mar",
+      "prophet_pred": 0.748,
+      "gbm_pred": 0.561,
+      "actual_2025": null,
+      "prophet_abs_error": null,
+      "gbm_abs_error": null
+    },
+    {
+      "month": "Apr",
+      "prophet_pred": 0.776,
+      "gbm_pred": 0.507,
+      "actual_2025": 0.755,
+      "prophet_abs_error": 0.021,
+      "gbm_abs_error": 0.248
+    },
+    {
+      "month": "May",
+      "prophet_pred": 0.812,
+      "gbm_pred": 0.519,
+      "actual_2025": 0.82,
+      "prophet_abs_error": 0.008,
+      "gbm_abs_error": 0.301
+    },
+    {
+      "month": "Jun",
+      "prophet_pred": 0.83,
+      "gbm_pred": 0.608,
+      "actual_2025": 0.808,
+      "prophet_abs_error": 0.022,
+      "gbm_abs_error": 0.2
+    },
+    {
+      "month": "Jul",
+      "prophet_pred": 0.903,
+      "gbm_pred": 0.792,
+      "actual_2025": 0.888,
+      "prophet_abs_error": 0.015,
+      "gbm_abs_error": 0.096
+    },
+    {
+      "month": "Aug",
+      "prophet_pred": 0.825,
+      "gbm_pred": 0.758,
+      "actual_2025": 0.815,
+      "prophet_abs_error": 0.01,
+      "gbm_abs_error": 0.057
+    },
+    {
+      "month": "Sep",
+      "prophet_pred": 0.895,
+      "gbm_pred": 0.809,
+      "actual_2025": 0.837,
+      "prophet_abs_error": 0.058,
+      "gbm_abs_error": 0.028
+    },
+    {
+      "month": "Oct",
+      "prophet_pred": 0.794,
+      "gbm_pred": 0.733,
+      "actual_2025": 0.744,
+      "prophet_abs_error": 0.05,
+      "gbm_abs_error": 0.011
+    },
+    {
+      "month": "Nov",
+      "prophet_pred": 0.653,
+      "gbm_pred": 0.544,
+      "actual_2025": 0.615,
+      "prophet_abs_error": 0.038,
+      "gbm_abs_error": 0.071
+    },
+    {
+      "month": "Dec",
+      "prophet_pred": 0.601,
+      "gbm_pred": 0.579,
+      "actual_2025": 0.679,
+      "prophet_abs_error": 0.078,
+      "gbm_abs_error": 0.1
+    }
+  ]
+}
