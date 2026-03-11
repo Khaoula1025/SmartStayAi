@@ -2,6 +2,8 @@ x-airflow-common: &airflow-common
   build:
     context: ./airflow          # ← your airflow/ folder
     dockerfile: Dockerfile
+  env_file:
+    - ./backend/.env
   environment: &airflow-env
     # ── Airflow core ────────────────────────────────────────────────────
     AIRFLOW__CORE__EXECUTOR: LocalExecutor
@@ -75,6 +77,8 @@ services:
     <<: *airflow-common
     container_name: smartstay-airflow-init
     entrypoint: /bin/bash
+    env_file:
+      - ./backend/.env
     command:
       - -c
       - |
@@ -99,6 +103,8 @@ services:
     command: webserver
     ports:
       - "8080:8080"
+    env_file:
+      - ./backend/.env
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
       interval: 30s
@@ -113,6 +119,8 @@ services:
   airflow-scheduler:
     <<: *airflow-common
     container_name: smartstay-airflow-scheduler
+    env_file:
+      - ./backend/.env
     restart: unless-stopped
     command: scheduler
     healthcheck:
