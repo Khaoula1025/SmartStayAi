@@ -3,10 +3,10 @@ import numpy as np
 import warnings
 import json
 from sklearn.ensemble import GradientBoostingRegressor, RandomForestRegressor
-from sklearn.model_selection import KFold, cross_val_score
 from sklearn.metrics import mean_absolute_error, r2_score
-from sklearn.preprocessing import LabelEncoder
-
+import os
+import joblib
+from pathlib import Path
 warnings.filterwarnings('ignore')
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
@@ -382,3 +382,14 @@ with open(METRICS_PATH, 'w') as f:
 print(f"✅ Model metrics saved → {METRICS_PATH}")
 print()
 print("DONE.")
+
+
+
+MODELS_DIR = Path(os.getenv('MODELS_DIR', 'data/models'))
+MODELS_DIR.mkdir(parents=True, exist_ok=True)
+
+joblib.dump(gbm, MODELS_DIR / 'gbm_model.joblib')
+joblib.dump(rf,  MODELS_DIR / 'rf_model.joblib')
+
+print(f"✅ Models saved → {MODELS_DIR}/gbm_model.joblib")
+print(f"✅ Models saved → {MODELS_DIR}/rf_model.joblib")
