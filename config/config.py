@@ -1,29 +1,3 @@
-"""
-config.py — SmartStay Intelligence
-====================================
-Single source of truth for all paths, DB settings, and constants.
-Imported by every script and by the Airflow DAG.
-
-Override any value via environment variables or a .env file
-in the project root.
-
-Project layout expected:
-  smartstay-intelligence/
-    config.py
-    scripts/
-      01_clean_occupancy.py
-      ...
-      08_pipeline.py
-      09_airflow_dag.py
-    data/
-      raw/          ← raw Excel uploads from PMS / pickup tool
-      processed/    ← cleaned CSVs (output of scripts 01-06)
-      prediction/   ← matrix + model outputs (scripts 06-07b)
-      models/       ← saved model files (.joblib)
-    logs/
-    tests/
-"""
-
 import os
 from pathlib import Path
 
