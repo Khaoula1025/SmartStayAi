@@ -1,5 +1,6 @@
 from datetime import date, datetime
 from typing import Optional, List
+from uuid import UUID
 from pydantic import BaseModel
 
 
@@ -24,7 +25,7 @@ class AccuracySummary(BaseModel):
 
 
 class ModelMetricsOut(BaseModel):
-    run_id:            str
+    run_id:            UUID
     trained_at:        datetime
     model_type:        Optional[str]   = None
     n_training_rows:   int

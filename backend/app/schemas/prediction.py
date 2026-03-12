@@ -1,5 +1,6 @@
 from datetime import date
 from typing import Optional
+from uuid import UUID
 from pydantic import BaseModel
 
 
@@ -29,7 +30,7 @@ class PredictionOut(BaseModel):
 
 
 class ModelRunOut(BaseModel):
-    run_id:            str
+    run_id:            UUID
     trained_at:        str
     model_type:        Optional[str]   = None
     n_training_rows:   int

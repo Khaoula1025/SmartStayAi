@@ -1,5 +1,6 @@
 from datetime import date, datetime
 from typing import Optional
+from uuid import UUID
 from pydantic import BaseModel, Field
 
 
@@ -12,7 +13,7 @@ class RateDecisionIn(BaseModel):
 
 
 class RateDecisionOut(BaseModel):
-    id:               str
+    id:               UUID
     date:             date
     recommended_rate: float
     final_rate:       Optional[float] = None
