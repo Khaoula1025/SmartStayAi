@@ -1,0 +1,87 @@
+{
+  "base_value": 0.664,
+  "base_value_pct": 66.4,
+  "n_dates": 307,
+  "n_features": 13,
+  "feature_importance": [
+    {
+      "feature": "month",
+      "label": "Month of year",
+      "importance": 0.10992,
+      "importance_pp": 10.99
+    },
+    {
+      "feature": "b_adr",
+      "label": "Budget rate target",
+      "importance": 0.04428,
+      "importance_pp": 4.43
+    },
+    {
+      "feature": "cs_adr",
+      "label": "Competitor rate (ADR)",
+      "importance": 0.0412,
+      "importance_pp": 4.12
+    },
+    {
+      "feature": "cs_occ",
+      "label": "Competitor occupancy",
+      "importance": 0.02607,
+      "importance_pp": 2.61
+    },
+    {
+      "feature": "is_high_season",
+      "label": "High season",
+      "importance": 0.01896,
+      "importance_pp": 1.9
+    },
+    {
+      "feature": "season",
+      "label": "Season (low/shoulder/high)",
+      "importance": 0.01712,
+      "importance_pp": 1.71
+    },
+    {
+      "feature": "b_occ",
+      "label": "Budget occupancy target",
+      "importance": 0.01562,
+      "importance_pp": 1.56
+    },
+    {
+      "feature": "dow",
+      "label": "Day of week",
+      "importance": 0.01513,
+      "importance_pp": 1.51
+    },
+    {
+      "feature": "floor_price",
+      "label": "Floor price (FIT rate)",
+      "importance": 0.01368,
+      "importance_pp": 1.37
+    },
+    {
+      "feature": "is_weekend",
+      "label": "Weekend",
+      "importance": 0.00079,
+      "importance_pp": 0.08
+    },
+    {
+      "feature": "is_bank_holiday",
+      "label": "Bank holiday",
+      "importance": 0.00064,
+      "importance_pp": 0.06
+    },
+    {
+      "feature": "is_cultural_holiday",
+      "label": "Cultural holiday",
+      "importance": 0.0,
+      "importance_pp": 0.0
+    },
+    {
+      "feature": "is_local_event",
+      "label": "Local event nearby",
+      "importance": 0.0,
+      "importance_pp": 0.0
+    }
+  ],
+  "generated_at": "2026-03-13T01:49:45.425836"
+}
