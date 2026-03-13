@@ -9,6 +9,8 @@ from app.api.v1.endpoints.pipeline   import pipelineRouter
 from app.api.v1.endpoints.actuals    import actualsRouter
 from app.api.v1.endpoints.dashboard  import dashboardRouter
 from app.db.init_db import init_db
+from app.api.v1.endpoints.explain      import explainRouter
+from app.api.v1.endpoints.seasonality  import seasonalityRouter
 
 app = FastAPI(title="SmartStay Intelligence API")
 
@@ -33,6 +35,8 @@ app.include_router(pipelineRouter,   prefix="/api/v1")
 app.include_router(actualsRouter,    prefix="/api/v1")
 app.include_router(dashboardRouter,  prefix="/api/v1")
 
+app.include_router(explainRouter,    prefix="/api/v1")
+app.include_router(seasonalityRouter, prefix="/api/v1")
 @app.get("/")
 def root():
     return {"message": "SmartStay Intelligence API"}
