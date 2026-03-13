@@ -102,3 +102,15 @@ export async function getPipelineStatus() {
 export async function triggerPipeline(steps) {
   return fetchWithAuth(`/pipeline/trigger?steps=${steps}`, { method: 'POST' });
 }
+
+export async function getShapSummary() {
+  return fetchWithAuth('/explain/summary', { method: 'GET' });
+}
+
+export async function getShapExplanation(date) {
+  return fetchWithAuth(`/explain/${date}`, { method: 'GET' });
+}
+
+export async function getSeasonality() {
+  return fetchWithAuth('/analytics/seasonality/', { method: 'GET' });
+}

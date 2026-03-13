@@ -1,14 +1,15 @@
 'use client';
 
-import { useState, useEffect, useMemo } from 'react';
-import { Filter, Check, Edit2, Minus, Calendar, DollarSign, Activity, Settings2, Download } from 'lucide-react';
-import { getPredictions, getRateDecisions, postRateDecision } from '../lib/api';
+import { useState, useEffect, useMemo ,useRef} from 'react';
+import { Filter, Check, Edit2, Minus, Calendar, DollarSign, Activity, Settings2, Download, HelpCircle } from 'lucide-react';
+import { getPredictions, getRateDecisions, postRateDecision, getShapExplanation } from '../lib/api';
 import { formatOcc, formatRate, formatShortDate, formatDate, tierColor } from '../lib/format';
 import DashboardLayout from '../components/layout/DashboardLayout';
 import Badge from '../components/ui/Badge';
 import AlertBanner from '../components/ui/AlertBanner';
 import LoadingSpinner from '../components/ui/LoadingSpinner';
 import Modal from '../components/ui/Modal';
+import ShapTooltip from '../components/ui/ShapTooltip';
 
 export default function RatesPage() {
   const [data, setData] = useState([]);
@@ -31,6 +32,13 @@ export default function RatesPage() {
   const [overrideRateStr, setOverrideRateStr] = useState('');
   const [overrideReason, setOverrideReason] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  // SHAP Tooltip State
+  const [activeTooltipDate, setActiveTooltipDate] = useState(null);
+  const [tooltipData, setTooltipData] = useState(null);
+  const [isFetchingShap, setIsFetchingShap] = useState(false);
+  const [anchorRect, setAnchorRect] = useState(null);
+  const shapCache = useRef({});
 
   const loadData = async (from, to) => {
     setIsLoading(true);
@@ -187,6 +195,35 @@ export default function RatesPage() {
     closeOverrideModal();
   };
 
+  const handleShowShap = async (e, row) => {
+    const date = row.date;
+    const rect = e.currentTarget.getBoundingClientRect();
+    setAnchorRect(rect);
+
+    if (activeTooltipDate === date) {
+      setActiveTooltipDate(null);
+      return;
+    }
+
+    if (shapCache.current[date]) {
+      setTooltipData(shapCache.current[date]);
+      setActiveTooltipDate(date);
+      return;
+    }
+
+    setIsFetchingShap(date);
+    try {
+      const resp = await getShapExplanation(date);
+      shapCache.current[date] = resp;
+      setTooltipData(resp);
+      setActiveTooltipDate(date);
+    } catch (err) {
+      console.error('Failed to fetch SHAP:', err);
+    } finally {
+      setIsFetchingShap(null);
+    }
+  };
+
   return (
     <DashboardLayout>
       <div className="space-y-6">
@@ -286,6 +323,7 @@ export default function RatesPage() {
                         <th className="px-5 py-4 font-semibold text-right">Predicted Occ</th>
                         <th className="px-5 py-4 font-semibold text-right">Recommended Rate</th>
                         <th className="px-5 py-4 font-semibold text-center">Tier</th>
+                        <th className="px-5 py-4 font-semibold text-center w-[60px]">Why?</th>
                         <th className="px-5 py-4 font-semibold w-[320px]">Decision</th>
                       </tr>
                     </thead>
@@ -318,6 +356,22 @@ export default function RatesPage() {
                                   color: tierColor(row.rate_tier)
                                 }}
                               />
+                            </td>
+                            <td className="px-5 py-2 text-center">
+                              <button
+                                onClick={(e) => handleShowShap(e, row)}
+                                className={`w-8 h-8 rounded-full inline-flex items-center justify-center transition-all ${
+                                  activeTooltipDate === row.date 
+                                    ? 'bg-navy text-white shadow-md' 
+                                    : 'bg-navy/5 text-navy hover:bg-navy/10'
+                                }`}
+                              >
+                                {isFetchingShap === row.date ? (
+                                  <Activity className="w-4 h-4 animate-spin" />
+                                ) : (
+                                  <HelpCircle className="w-4 h-4" />
+                                )}
+                              </button>
                             </td>
                             <td className="px-5 py-2">
                               {row.decision ? (
@@ -459,6 +513,17 @@ export default function RatesPage() {
           </div>
         </form>
       </Modal>
+
+      {activeTooltipDate && tooltipData && (
+        <ShapTooltip 
+          date={formatDate(activeTooltipDate)}
+          rate={data.find(d => d.date === activeTooltipDate)?.recommended_rate}
+          occ={Math.round((data.find(d => d.date === activeTooltipDate)?.predicted_occ || 0) * 100)}
+          data={tooltipData}
+          anchorRect={anchorRect}
+          onClose={() => setActiveTooltipDate(null)}
+        />
+      )}
     </DashboardLayout>
   );
 }

@@ -5,13 +5,14 @@ import { Target, TrendingUp, AlertTriangle, AlertCircle, BarChart2, Hash, Star }
 import { 
   ComposedChart, Line, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend
 } from 'recharts';
-import { getAccuracy, getModelMetrics, getModelHistory } from '../lib/api';
+import { getAccuracy, getModelMetrics, getModelHistory, getSeasonality } from '../lib/api';
 import { formatOcc, formatError, formatPercent, formatShortDate, formatDate } from '../lib/format';
 import DashboardLayout from '../components/layout/DashboardLayout';
 import EmptyState from '../components/ui/EmptyState';
 import AlertBanner from '../components/ui/AlertBanner';
 import LoadingSpinner from '../components/ui/LoadingSpinner';
 import Badge from '../components/ui/Badge';
+import SeasonalityCharts from '../components/charts/SeasonalityCharts';
 
 export default function AnalyticsPage() {
   const [accuracyData, setAccuracyData] = useState(null);
@@ -20,6 +21,11 @@ export default function AnalyticsPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [noActuals, setNoActuals] = useState(false);
+  
+  // Tab State
+  const [activeTab, setActiveTab] = useState('accuracy');
+  const [seasonalityData, setSeasonalityData] = useState(null);
+  const [isFetchingSeasonality, setIsFetchingSeasonality] = useState(false);
 
   // Default to past 30 days for accuracy view
   const today = new Date();
@@ -46,7 +52,7 @@ export default function AnalyticsPage() {
           getModelHistory().catch(() => [])
         ]);
 
-        if (acc?.no_data || (!acc.rows || acc.rows.length === 0)) {
+        if (!acc || acc.no_data || !acc.rows || acc.rows.length === 0) {
           setNoActuals(true);
         } else {
           setAccuracyData(acc);
@@ -65,6 +71,21 @@ export default function AnalyticsPage() {
     loadData();
   }, [dateFrom, dateTo]);
 
+  const handleTabChange = async (tab) => {
+    setActiveTab(tab);
+    if (tab === 'seasonality' && !seasonalityData && !isFetchingSeasonality) {
+      setIsFetchingSeasonality(true);
+      try {
+        const data = await getSeasonality();
+        setSeasonalityData(data);
+      } catch (err) {
+        console.error('Failed to load seasonality:', err);
+      } finally {
+        setIsFetchingSeasonality(false);
+      }
+    }
+  };
+
   // Transform daily accuracy for chart
   const chartData = useMemo(() => {
     if (!accuracyData?.rows) return [];
@@ -72,10 +93,10 @@ export default function AnalyticsPage() {
     return accuracyData.rows.map(d => ({
       date: formatShortDate(d.date),
       fullDate: d.date,
-      actual: Number((d.actual_occ * 100).toFixed(1)),
-      predicted: Number((d.predicted_occ * 100).toFixed(1)),
-      error: Number(d.abs_error.toFixed(1)),
-      tier: d.rate_tier
+      actual: d.actual_occ != null ? Number((d.actual_occ * 100).toFixed(1)) : 0,
+      predicted: d.predicted_occ != null ? Number((d.predicted_occ * 100).toFixed(1)) : 0,
+      error: d.abs_error != null ? Number(d.abs_error.toFixed(1)) : 0,
+      tier: d.rate_tier || 'N/A'
     }));
   }, [accuracyData]);
 
@@ -136,20 +157,45 @@ export default function AnalyticsPage() {
           </div>
         </div>
 
+        {/* Tabs */}
+        <div className="flex border-b border-border">
+          <button
+            onClick={() => handleTabChange('accuracy')}
+            className={`px-6 py-3 text-sm font-bold transition-all border-b-2 ${
+              activeTab === 'accuracy' 
+                ? 'border-navy text-gold' 
+                : 'border-transparent text-text-muted hover:text-text-dark'
+            }`}
+          >
+            Accuracy
+          </button>
+          <button
+            onClick={() => handleTabChange('seasonality')}
+            className={`px-6 py-3 text-sm font-bold transition-all border-b-2 ${
+              activeTab === 'seasonality' 
+                ? 'border-navy text-gold' 
+                : 'border-transparent text-text-muted hover:text-text-dark'
+            }`}
+          >
+            Seasonality
+          </button>
+        </div>
+
         {error && <AlertBanner message={error} type="error" />}
 
-        {isLoading ? (
-          <div className="bg-white rounded-xl shadow-sm border border-border p-12 min-h-[400px] flex items-center justify-center">
-            <LoadingSpinner text="Computing performance metrics..." />
-          </div>
-        ) : noActuals ? (
-          <EmptyState
-            icon={BarChart2}
-            title="No Actuals Data"
-            description="No actuals have been loaded into the system yet, so we cannot calculate accuracy metrics. Ask an admin to run POST /actuals/load after uploading clean_occupancy.csv."
-          />
-        ) : (
-          <>
+        {activeTab === 'accuracy' ? (
+          isLoading ? (
+            <div className="bg-white rounded-xl shadow-sm border border-border p-12 min-h-[400px] flex items-center justify-center">
+              <LoadingSpinner text="Computing performance metrics..." />
+            </div>
+          ) : noActuals ? (
+            <EmptyState
+              icon={BarChart2}
+              title="No Actuals Data"
+              description="No actuals have been loaded into the system yet, so we cannot calculate accuracy metrics. Ask an admin to run POST /actuals/load after uploading clean_occupancy.csv."
+            />
+          ) : (
+            <>
             {/* Summary Stat Pills */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               <div className="bg-white p-5 rounded-xl shadow-sm border border-border">
@@ -158,7 +204,7 @@ export default function AnalyticsPage() {
                 </p>
                 <div className="flex items-baseline gap-2">
                   <p className="text-4xl font-bold tracking-tight tabular-nums text-text-dark">
-                    {accuracyData?.mean_abs_error_pp?.toFixed(1) || '-'}
+                    {accuracyData?.mean_abs_error_pp != null ? accuracyData.mean_abs_error_pp.toFixed(1) : '-'}
                   </p>
                   <span className="text-lg font-medium text-text-muted">pp</span>
                 </div>
@@ -232,7 +278,7 @@ export default function AnalyticsPage() {
                         domain={[0, 'dataMax + 5']}
                         tickFormatter={(val) => `${val}pp`}
                       />
-                      <Tooltip content={<CustomTooltip />} />
+                      <Tooltip content={CustomTooltip} />
                       <Legend 
                         verticalAlign="top" 
                         height={36} 
@@ -368,6 +414,14 @@ export default function AnalyticsPage() {
               </div>
             </div>
           </>
+        )) : (
+          isFetchingSeasonality ? (
+            <div className="bg-white rounded-xl shadow-sm border border-border p-12 min-h-[400px] flex items-center justify-center">
+              <LoadingSpinner text="Analyzing demand cycles..." />
+            </div>
+          ) : (
+            <SeasonalityCharts data={seasonalityData} />
+          )
         )}
       </div>
     </DashboardLayout>
