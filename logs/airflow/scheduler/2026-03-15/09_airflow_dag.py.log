@@ -1,0 +1,1063 @@
+[2026-03-15T11:42:08.675+0000] {processor.py:161} INFO - Started process (PID=1300) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:42:08.683+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T11:42:08.705+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:42:08.704+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:42:09.041+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:42:09.157+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:42:09.157+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T11:42:09.267+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:42:09.266+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T11:42:09.374+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.724 seconds
+[2026-03-15T11:42:39.898+0000] {processor.py:161} INFO - Started process (PID=1325) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:42:39.903+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T11:42:39.921+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:42:39.918+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:42:40.324+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:42:40.519+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:42:40.518+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T11:42:40.677+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:42:40.676+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T11:42:40.701+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:42:40.701+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T11:42:40.836+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.995 seconds
+[2026-03-15T11:43:11.648+0000] {processor.py:161} INFO - Started process (PID=1337) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:43:11.650+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T11:43:11.652+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:43:11.652+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:43:11.778+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:43:11.837+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:43:11.837+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T11:43:11.944+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:43:11.943+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T11:43:11.960+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:43:11.959+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T11:43:12.031+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.392 seconds
+[2026-03-15T11:43:42.420+0000] {processor.py:161} INFO - Started process (PID=1348) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:43:42.423+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T11:43:42.426+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:43:42.425+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:43:42.601+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:43:42.679+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:43:42.679+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T11:43:42.749+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:43:42.749+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T11:43:42.761+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:43:42.761+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T11:43:42.823+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.416 seconds
+[2026-03-15T11:44:13.335+0000] {processor.py:161} INFO - Started process (PID=1359) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:44:13.337+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T11:44:13.341+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:44:13.340+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:44:13.486+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:44:13.547+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:44:13.546+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T11:44:13.601+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:44:13.601+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T11:44:13.612+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:44:13.612+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T11:44:13.665+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.347 seconds
+[2026-03-15T11:44:43.842+0000] {processor.py:161} INFO - Started process (PID=1370) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:44:43.846+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T11:44:43.855+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:44:43.853+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:44:44.093+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:44:44.171+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:44:44.170+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T11:44:44.228+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:44:44.228+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T11:44:44.239+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:44:44.239+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T11:44:44.296+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.481 seconds
+[2026-03-15T11:45:14.385+0000] {processor.py:161} INFO - Started process (PID=1381) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:45:14.387+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T11:45:14.390+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:45:14.389+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:45:14.619+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:45:14.679+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:45:14.679+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T11:45:14.734+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:45:14.734+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T11:45:14.743+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:45:14.743+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T11:45:14.796+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.421 seconds
+[2026-03-15T11:45:44.978+0000] {processor.py:161} INFO - Started process (PID=1392) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:45:44.980+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T11:45:44.984+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:45:44.983+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:45:45.173+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:45:45.244+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:45:45.244+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T11:45:45.309+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:45:45.309+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T11:45:45.320+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:45:45.319+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T11:45:45.382+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.422 seconds
+[2026-03-15T11:46:15.776+0000] {processor.py:161} INFO - Started process (PID=1403) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:46:15.779+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T11:46:15.784+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:46:15.783+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:46:15.957+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:46:16.023+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:46:16.023+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T11:46:16.081+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:46:16.080+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T11:46:16.090+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:46:16.089+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T11:46:16.147+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.397 seconds
+[2026-03-15T11:46:46.530+0000] {processor.py:161} INFO - Started process (PID=1414) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:46:46.531+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T11:46:46.534+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:46:46.534+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:46:46.680+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:46:46.737+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:46:46.737+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T11:46:46.790+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:46:46.789+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T11:46:46.801+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:46:46.801+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T11:46:46.858+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.343 seconds
+[2026-03-15T11:47:17.024+0000] {processor.py:161} INFO - Started process (PID=1419) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:47:17.026+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T11:47:17.031+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:47:17.030+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:47:17.203+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:47:17.267+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:47:17.267+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T11:47:17.324+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:47:17.323+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T11:47:17.333+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:47:17.333+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T11:47:17.388+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.387 seconds
+[2026-03-15T11:47:47.518+0000] {processor.py:161} INFO - Started process (PID=1430) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:47:47.519+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T11:47:47.522+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:47:47.522+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:47:47.634+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:47:47.677+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:47:47.676+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T11:47:47.713+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:47:47.712+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T11:47:47.719+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:47:47.719+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T11:47:47.759+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.250 seconds
+[2026-03-15T11:48:17.878+0000] {processor.py:161} INFO - Started process (PID=1441) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:48:17.881+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T11:48:17.887+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:48:17.886+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:48:18.065+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:48:18.124+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:48:18.124+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T11:48:18.175+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:48:18.175+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T11:48:18.186+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:48:18.186+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T11:48:18.235+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.375 seconds
+[2026-03-15T11:48:48.551+0000] {processor.py:161} INFO - Started process (PID=1452) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:48:48.554+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T11:48:48.560+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:48:48.559+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:48:48.798+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:48:48.885+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:48:48.884+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T11:48:48.944+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:48:48.943+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T11:48:48.955+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:48:48.955+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T11:48:49.018+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.488 seconds
+[2026-03-15T11:49:19.345+0000] {processor.py:161} INFO - Started process (PID=1463) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:49:19.347+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T11:49:19.350+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:49:19.349+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:49:19.503+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:49:19.562+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:49:19.562+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T11:49:19.624+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:49:19.623+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T11:49:19.636+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:49:19.636+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T11:49:19.709+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.385 seconds
+[2026-03-15T11:49:50.297+0000] {processor.py:161} INFO - Started process (PID=1474) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:49:50.299+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T11:49:50.302+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:49:50.302+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:49:50.450+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:49:50.515+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:49:50.514+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T11:49:50.571+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:49:50.571+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T11:49:50.581+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:49:50.581+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T11:49:50.633+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.347 seconds
+[2026-03-15T11:50:21.081+0000] {processor.py:161} INFO - Started process (PID=1485) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:50:21.085+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T11:50:21.092+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:50:21.091+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:50:21.252+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:50:21.317+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:50:21.317+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T11:50:21.371+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:50:21.370+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T11:50:21.379+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:50:21.379+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T11:50:21.447+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.401 seconds
+[2026-03-15T11:50:51.884+0000] {processor.py:161} INFO - Started process (PID=1496) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:50:51.886+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T11:50:51.889+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:50:51.888+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:50:52.050+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:50:52.116+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:50:52.115+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T11:50:52.174+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:50:52.174+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T11:50:52.186+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:50:52.186+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T11:50:52.250+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.380 seconds
+[2026-03-15T11:51:22.412+0000] {processor.py:161} INFO - Started process (PID=1507) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:51:22.415+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T11:51:22.422+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:51:22.420+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:51:22.626+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:51:23.100+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:51:23.099+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T11:51:23.151+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:51:23.151+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T11:51:23.164+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:51:23.164+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T11:51:23.243+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.853 seconds
+[2026-03-15T11:51:53.705+0000] {processor.py:161} INFO - Started process (PID=1519) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:51:53.707+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T11:51:53.710+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:51:53.710+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:51:53.862+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:51:53.939+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:51:53.938+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T11:51:53.990+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:51:53.990+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T11:51:53.999+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:51:53.999+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T11:51:54.052+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.357 seconds
+[2026-03-15T11:52:24.214+0000] {processor.py:161} INFO - Started process (PID=1524) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:52:24.216+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T11:52:24.220+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:52:24.219+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:52:24.383+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:52:24.455+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:52:24.455+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T11:52:24.504+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:52:24.504+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T11:52:24.513+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:52:24.512+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T11:52:24.565+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.366 seconds
+[2026-03-15T11:52:54.836+0000] {processor.py:161} INFO - Started process (PID=1535) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:52:54.840+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T11:52:54.846+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:52:54.845+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:52:55.236+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:52:55.286+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:52:55.286+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T11:52:55.378+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:52:55.378+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T11:52:55.395+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:52:55.395+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T11:52:55.493+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.682 seconds
+[2026-03-15T11:53:25.912+0000] {processor.py:161} INFO - Started process (PID=1546) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:53:25.916+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T11:53:25.923+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:53:25.922+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:53:26.116+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:53:26.188+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:53:26.188+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T11:53:26.252+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:53:26.251+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T11:53:26.263+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:53:26.262+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T11:53:26.330+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.448 seconds
+[2026-03-15T11:53:56.759+0000] {processor.py:161} INFO - Started process (PID=1557) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:53:56.761+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T11:53:56.766+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:53:56.766+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:53:57.022+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:53:57.128+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:53:57.128+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T11:53:57.235+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:53:57.234+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T11:53:57.253+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:53:57.252+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T11:53:57.340+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.602 seconds
+[2026-03-15T11:54:27.753+0000] {processor.py:161} INFO - Started process (PID=1568) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:54:27.755+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T11:54:27.760+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:54:27.759+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:54:28.051+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:54:28.160+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:54:28.159+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T11:54:28.240+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:54:28.239+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T11:54:28.250+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:54:28.250+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T11:54:28.304+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.567 seconds
+[2026-03-15T11:54:58.596+0000] {processor.py:161} INFO - Started process (PID=1579) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:54:58.598+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T11:54:58.600+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:54:58.600+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:54:58.746+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:54:58.805+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:54:58.805+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T11:54:58.858+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:54:58.858+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T11:54:58.866+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:54:58.866+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T11:54:58.934+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.348 seconds
+[2026-03-15T11:55:29.645+0000] {processor.py:161} INFO - Started process (PID=1590) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:55:29.647+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T11:55:29.650+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:55:29.649+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:55:29.768+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:55:29.824+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:55:29.824+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T11:55:29.881+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:55:29.880+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T11:55:29.889+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:55:29.889+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T11:55:29.937+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.300 seconds
+[2026-03-15T11:56:00.457+0000] {processor.py:161} INFO - Started process (PID=1601) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:56:00.462+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T11:56:00.473+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:56:00.471+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:56:00.734+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:56:00.788+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:56:00.788+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T11:56:00.830+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:56:00.830+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T11:56:00.839+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:56:00.839+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T11:56:00.899+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.482 seconds
+[2026-03-15T11:56:31.312+0000] {processor.py:161} INFO - Started process (PID=1612) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:56:31.314+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T11:56:31.317+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:56:31.317+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:56:31.508+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:56:31.585+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:56:31.584+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T11:56:31.658+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:56:31.658+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T11:56:31.673+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:56:31.673+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T11:56:31.743+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.447 seconds
+[2026-03-15T11:57:02.405+0000] {processor.py:161} INFO - Started process (PID=1623) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:57:02.409+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T11:57:02.420+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:57:02.418+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:57:02.746+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:57:02.803+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:57:02.803+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T11:57:02.848+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:57:02.848+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T11:57:02.857+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:57:02.856+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T11:57:02.939+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.561 seconds
+[2026-03-15T11:57:33.240+0000] {processor.py:161} INFO - Started process (PID=1634) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:57:33.242+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T11:57:33.246+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:57:33.245+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:57:33.366+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:57:33.414+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:57:33.414+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T11:57:33.454+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:57:33.453+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T11:57:33.461+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:57:33.460+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T11:57:33.506+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.280 seconds
+[2026-03-15T11:58:04.119+0000] {processor.py:161} INFO - Started process (PID=1639) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:58:04.121+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T11:58:04.126+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:58:04.125+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:58:04.317+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:58:04.365+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:58:04.364+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T11:58:04.408+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:58:04.407+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T11:58:04.417+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:58:04.417+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T11:58:04.471+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.366 seconds
+[2026-03-15T11:58:35.114+0000] {processor.py:161} INFO - Started process (PID=1650) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:58:35.116+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T11:58:35.121+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:58:35.120+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:58:35.258+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:58:35.328+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:58:35.328+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T11:58:35.377+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:58:35.376+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T11:58:35.387+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:58:35.386+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T11:58:35.477+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.380 seconds
+[2026-03-15T11:59:05.907+0000] {processor.py:161} INFO - Started process (PID=1661) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:59:05.909+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T11:59:05.914+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:59:05.913+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:59:06.044+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:59:06.105+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:59:06.105+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T11:59:06.155+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:59:06.155+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T11:59:06.164+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:59:06.164+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T11:59:06.219+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.330 seconds
+[2026-03-15T11:59:36.849+0000] {processor.py:161} INFO - Started process (PID=1672) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:59:36.851+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T11:59:36.854+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:59:36.853+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:59:36.975+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T11:59:37.029+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:59:37.029+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T11:59:37.076+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:59:37.076+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T11:59:37.086+0000] {logging_mixin.py:188} INFO - [2026-03-15T11:59:37.085+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T11:59:37.142+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.303 seconds
+[2026-03-15T12:00:07.654+0000] {processor.py:161} INFO - Started process (PID=1683) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:00:07.657+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T12:00:07.660+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:00:07.659+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:00:07.796+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:00:07.848+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:00:07.848+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T12:00:07.892+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:00:07.891+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T12:00:07.900+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:00:07.900+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T12:00:07.970+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.327 seconds
+[2026-03-15T12:00:38.099+0000] {processor.py:161} INFO - Started process (PID=1695) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:00:38.102+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T12:00:38.108+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:00:38.107+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:00:38.308+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:00:38.383+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:00:38.382+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T12:00:38.436+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:00:38.436+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T12:00:38.446+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:00:38.446+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T12:00:38.524+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.443 seconds
+[2026-03-15T12:01:08.938+0000] {processor.py:161} INFO - Started process (PID=1707) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:01:08.941+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T12:01:08.948+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:01:08.947+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:01:09.218+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:01:09.303+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:01:09.303+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T12:01:09.358+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:01:09.358+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T12:01:09.367+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:01:09.366+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T12:01:09.417+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.499 seconds
+[2026-03-15T12:01:39.930+0000] {processor.py:161} INFO - Started process (PID=1718) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:01:39.931+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T12:01:39.933+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:01:39.933+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:01:40.082+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:01:40.139+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:01:40.139+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T12:01:40.191+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:01:40.191+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T12:01:40.200+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:01:40.199+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T12:01:40.277+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.356 seconds
+[2026-03-15T12:02:10.517+0000] {processor.py:161} INFO - Started process (PID=1729) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:02:10.519+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T12:02:10.522+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:02:10.521+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:02:10.659+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:02:10.715+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:02:10.715+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T12:02:10.777+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:02:10.776+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T12:02:10.787+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:02:10.787+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T12:02:10.846+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.347 seconds
+[2026-03-15T12:02:41.281+0000] {processor.py:161} INFO - Started process (PID=1740) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:02:41.283+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T12:02:41.286+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:02:41.285+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:02:41.425+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:02:41.477+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:02:41.476+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T12:02:41.520+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:02:41.520+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T12:02:41.528+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:02:41.528+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T12:02:41.579+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.307 seconds
+[2026-03-15T12:03:11.880+0000] {processor.py:161} INFO - Started process (PID=1751) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:03:11.882+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T12:03:11.887+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:03:11.886+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:03:12.034+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:03:12.082+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:03:12.082+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T12:03:12.126+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:03:12.126+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T12:03:12.134+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:03:12.134+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T12:03:12.192+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.322 seconds
+[2026-03-15T12:03:42.351+0000] {processor.py:161} INFO - Started process (PID=1756) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:03:42.354+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T12:03:42.358+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:03:42.357+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:03:42.552+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:03:42.601+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:03:42.600+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T12:03:42.644+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:03:42.643+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T12:03:42.654+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:03:42.653+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T12:03:42.714+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.385 seconds
+[2026-03-15T12:04:13.128+0000] {processor.py:161} INFO - Started process (PID=1767) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:04:13.130+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T12:04:13.133+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:04:13.133+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:04:13.311+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:04:13.360+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:04:13.359+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T12:04:13.425+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:04:13.425+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T12:04:13.439+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:04:13.438+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T12:04:13.520+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.409 seconds
+[2026-03-15T12:04:44.201+0000] {processor.py:161} INFO - Started process (PID=1778) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:04:44.203+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T12:04:44.208+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:04:44.207+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:04:44.374+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:04:44.441+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:04:44.441+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T12:04:44.488+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:04:44.488+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T12:04:44.497+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:04:44.497+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T12:04:44.588+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.396 seconds
+[2026-03-15T12:05:14.933+0000] {processor.py:161} INFO - Started process (PID=1789) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:05:14.935+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T12:05:14.937+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:05:14.937+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:05:15.171+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:05:15.225+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:05:15.225+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T12:05:15.282+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:05:15.281+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T12:05:15.294+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:05:15.294+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T12:05:15.393+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.475 seconds
+[2026-03-15T12:05:45.944+0000] {processor.py:161} INFO - Started process (PID=1800) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:05:45.946+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T12:05:45.949+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:05:45.949+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:05:46.162+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:05:46.223+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:05:46.222+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T12:05:46.289+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:05:46.288+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T12:05:46.305+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:05:46.304+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T12:05:46.389+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.457 seconds
+[2026-03-15T12:06:16.876+0000] {processor.py:161} INFO - Started process (PID=1811) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:06:16.878+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T12:06:16.881+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:06:16.881+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:06:17.095+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:06:17.151+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:06:17.150+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T12:06:17.197+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:06:17.196+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T12:06:17.205+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:06:17.205+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T12:06:17.304+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.439 seconds
+[2026-03-15T12:06:47.932+0000] {processor.py:161} INFO - Started process (PID=1822) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:06:47.935+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T12:06:47.941+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:06:47.940+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:06:48.157+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:06:48.208+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:06:48.208+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T12:06:48.269+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:06:48.268+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T12:06:48.285+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:06:48.285+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T12:06:48.335+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.424 seconds
+[2026-03-15T12:07:18.822+0000] {processor.py:161} INFO - Started process (PID=1833) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:07:18.824+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T12:07:18.829+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:07:18.828+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:07:19.026+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:07:19.096+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:07:19.096+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T12:07:19.162+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:07:19.162+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T12:07:19.171+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:07:19.171+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T12:07:19.257+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.455 seconds
+[2026-03-15T12:07:49.976+0000] {processor.py:161} INFO - Started process (PID=1844) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:07:49.978+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T12:07:49.982+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:07:49.982+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:07:50.158+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:07:50.206+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:07:50.206+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T12:07:50.246+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:07:50.246+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T12:07:50.254+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:07:50.253+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T12:07:50.334+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.371 seconds
+[2026-03-15T12:08:20.833+0000] {processor.py:161} INFO - Started process (PID=1855) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:08:20.835+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T12:08:20.838+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:08:20.838+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:08:21.030+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:08:21.090+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:08:21.090+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T12:08:21.148+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:08:21.147+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T12:08:21.166+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:08:21.165+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T12:08:21.250+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.426 seconds
+[2026-03-15T12:08:51.902+0000] {processor.py:161} INFO - Started process (PID=1867) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:08:51.904+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T12:08:51.910+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:08:51.909+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:08:52.106+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:08:52.150+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:08:52.150+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T12:08:52.216+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:08:52.216+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T12:08:52.229+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:08:52.229+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T12:08:52.301+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.408 seconds
+[2026-03-15T12:09:22.669+0000] {processor.py:161} INFO - Started process (PID=1878) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:09:22.671+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T12:09:22.674+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:09:22.674+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:09:22.800+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:09:22.846+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:09:22.845+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T12:09:22.886+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:09:22.885+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T12:09:22.893+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:09:22.893+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T12:09:22.947+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.289 seconds
+[2026-03-15T12:09:53.303+0000] {processor.py:161} INFO - Started process (PID=1883) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:09:53.306+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T12:09:53.310+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:09:53.309+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:09:53.487+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:09:53.534+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:09:53.533+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T12:09:53.595+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:09:53.595+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T12:09:53.604+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:09:53.604+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T12:09:53.653+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.369 seconds
+[2026-03-15T12:10:24.068+0000] {processor.py:161} INFO - Started process (PID=1895) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:10:24.072+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T12:10:24.078+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:10:24.077+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:10:24.284+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:10:24.330+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:10:24.330+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T12:10:24.386+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:10:24.385+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T12:10:24.396+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:10:24.396+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T12:10:24.473+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.429 seconds
+[2026-03-15T12:10:55.195+0000] {processor.py:161} INFO - Started process (PID=1906) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:10:55.197+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T12:10:55.199+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:10:55.199+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:10:55.385+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:10:55.458+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:10:55.458+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T12:10:55.518+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:10:55.518+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T12:10:55.530+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:10:55.530+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T12:10:55.600+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.412 seconds
+[2026-03-15T12:11:25.901+0000] {processor.py:161} INFO - Started process (PID=1917) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:11:25.904+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T12:11:25.908+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:11:25.908+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:11:26.147+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T12:11:26.197+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:11:26.197+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T12:11:26.242+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:11:26.241+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T12:11:26.250+0000] {logging_mixin.py:188} INFO - [2026-03-15T12:11:26.249+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T12:11:26.325+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.439 seconds
+[2026-03-15T13:10:39.388+0000] {processor.py:161} INFO - Started process (PID=1928) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:10:39.401+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:10:39.424+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:10:39.423+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:10:40.690+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:10:40.932+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:10:40.932+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:10:41.126+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:10:41.125+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:10:41.201+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:10:41.196+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:10:41.340+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 2.005 seconds
+[2026-03-15T13:11:11.786+0000] {processor.py:161} INFO - Started process (PID=1939) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:11:11.787+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:11:11.790+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:11:11.790+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:11:11.908+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:11:11.956+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:11:11.956+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:11:11.995+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:11:11.995+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:11:12.004+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:11:12.003+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:11:12.050+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.274 seconds
+[2026-03-15T13:11:42.303+0000] {processor.py:161} INFO - Started process (PID=1950) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:11:42.304+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:11:42.307+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:11:42.306+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:11:42.422+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:11:42.469+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:11:42.469+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:11:42.510+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:11:42.509+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:11:42.517+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:11:42.517+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:11:42.566+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.271 seconds
+[2026-03-15T13:12:12.948+0000] {processor.py:161} INFO - Started process (PID=1961) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:12:12.951+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:12:12.956+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:12:12.955+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:12:13.139+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:12:13.185+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:12:13.185+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:12:13.224+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:12:13.224+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:12:13.232+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:12:13.231+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:12:13.309+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.389 seconds
+[2026-03-15T13:12:43.982+0000] {processor.py:161} INFO - Started process (PID=1972) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:12:43.985+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:12:43.989+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:12:43.988+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:12:44.137+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:12:44.200+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:12:44.199+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:12:44.237+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:12:44.236+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:12:44.244+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:12:44.244+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:12:44.289+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.322 seconds
+[2026-03-15T13:13:14.925+0000] {processor.py:161} INFO - Started process (PID=1984) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:13:14.927+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:13:14.929+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:13:14.929+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:13:15.054+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:13:15.106+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:13:15.105+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:13:15.145+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:13:15.144+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:13:15.152+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:13:15.152+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:13:15.197+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.282 seconds
+[2026-03-15T13:13:45.897+0000] {processor.py:161} INFO - Started process (PID=1989) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:13:45.898+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:13:45.901+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:13:45.901+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:13:46.020+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:13:46.066+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:13:46.066+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:13:46.104+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:13:46.103+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:13:46.111+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:13:46.111+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:13:46.195+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.307 seconds
+[2026-03-15T13:14:16.750+0000] {processor.py:161} INFO - Started process (PID=2000) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:14:16.752+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:14:16.754+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:14:16.754+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:14:16.882+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:14:16.940+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:14:16.940+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:14:16.980+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:14:16.980+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:14:16.992+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:14:16.992+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:14:17.064+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.325 seconds
+[2026-03-15T13:14:47.795+0000] {processor.py:161} INFO - Started process (PID=2011) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:14:47.796+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:14:47.799+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:14:47.799+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:14:47.919+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:14:47.970+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:14:47.970+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:14:48.034+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:14:48.034+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:14:48.044+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:14:48.044+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:14:48.127+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.344 seconds
+[2026-03-15T13:15:18.726+0000] {processor.py:161} INFO - Started process (PID=2022) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:15:18.729+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:15:18.733+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:15:18.732+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:15:18.900+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:15:18.952+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:15:18.952+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:15:18.997+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:15:18.997+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:15:19.007+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:15:19.007+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:15:19.063+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.351 seconds
+[2026-03-15T13:15:49.965+0000] {processor.py:161} INFO - Started process (PID=2033) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:15:49.967+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:15:49.969+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:15:49.968+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:15:50.095+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:15:50.150+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:15:50.149+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:15:50.196+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:15:50.195+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:15:50.204+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:15:50.204+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:15:50.265+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.308 seconds
+[2026-03-15T13:16:20.948+0000] {processor.py:161} INFO - Started process (PID=2044) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:16:20.951+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:16:20.955+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:16:20.954+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:16:21.098+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:16:21.146+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:16:21.145+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:16:21.187+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:16:21.187+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:16:21.195+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:16:21.194+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:16:21.283+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.353 seconds
+[2026-03-15T13:16:51.999+0000] {processor.py:161} INFO - Started process (PID=2055) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:16:52.001+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:16:52.004+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:16:52.003+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:16:52.120+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:16:52.169+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:16:52.169+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:16:52.208+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:16:52.208+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:16:52.215+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:16:52.215+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:16:52.295+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.314 seconds
+[2026-03-15T13:17:22.913+0000] {processor.py:161} INFO - Started process (PID=2066) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:17:22.916+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:17:22.921+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:17:22.920+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:17:23.109+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:17:23.156+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:17:23.155+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:17:23.197+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:17:23.196+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:17:23.205+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:17:23.204+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:17:23.284+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.402 seconds
+[2026-03-15T13:17:53.900+0000] {processor.py:161} INFO - Started process (PID=2078) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:17:53.903+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:17:53.907+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:17:53.906+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:17:54.114+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:17:54.169+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:17:54.169+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:17:54.222+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:17:54.221+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:17:54.237+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:17:54.237+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:17:54.305+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.430 seconds
+[2026-03-15T13:18:24.845+0000] {processor.py:161} INFO - Started process (PID=2089) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:18:24.847+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:18:24.850+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:18:24.849+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:18:25.029+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:18:25.086+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:18:25.085+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:18:25.129+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:18:25.128+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:18:25.137+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:18:25.137+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:18:25.196+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.361 seconds
+[2026-03-15T13:18:56.030+0000] {processor.py:161} INFO - Started process (PID=2100) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:18:56.033+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:18:56.038+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:18:56.037+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:18:56.188+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:18:56.232+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:18:56.231+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:18:56.269+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:18:56.269+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:18:56.276+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:18:56.276+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:18:56.354+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.343 seconds
+[2026-03-15T13:19:26.942+0000] {processor.py:161} INFO - Started process (PID=2111) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:19:26.943+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:19:26.946+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:19:26.946+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:19:27.084+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:19:27.142+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:19:27.142+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:19:27.183+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:19:27.183+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:19:27.192+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:19:27.191+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:19:27.246+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.316 seconds
+[2026-03-15T13:19:58.162+0000] {processor.py:161} INFO - Started process (PID=2116) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:19:58.164+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:19:58.168+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:19:58.167+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:19:58.292+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:19:58.343+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:19:58.342+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:19:58.383+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:19:58.382+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:19:58.390+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:19:58.389+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:19:58.434+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.285 seconds
+[2026-03-15T13:20:29.064+0000] {processor.py:161} INFO - Started process (PID=2127) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:20:29.067+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:20:29.073+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:20:29.072+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:20:29.268+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:20:29.321+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:20:29.320+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:20:29.362+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:20:29.362+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:20:29.371+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:20:29.371+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:20:29.419+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.374 seconds
+[2026-03-15T13:21:00.263+0000] {processor.py:161} INFO - Started process (PID=2139) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:21:00.265+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:21:00.267+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:21:00.267+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:21:00.389+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:21:00.437+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:21:00.437+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:21:00.494+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:21:00.494+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:21:00.507+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:21:00.506+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:21:00.568+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.313 seconds
+[2026-03-15T13:21:31.299+0000] {processor.py:161} INFO - Started process (PID=2150) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:21:31.301+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:21:31.305+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:21:31.304+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:21:31.490+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:21:31.572+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:21:31.571+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:21:31.641+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:21:31.641+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:21:31.652+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:21:31.652+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:21:31.743+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.461 seconds
+[2026-03-15T13:22:02.609+0000] {processor.py:161} INFO - Started process (PID=2161) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:22:02.612+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:22:02.617+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:22:02.616+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:22:02.780+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:22:02.827+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:22:02.827+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:22:02.874+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:22:02.874+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:22:02.885+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:22:02.885+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:22:02.947+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.358 seconds
+[2026-03-15T13:22:33.589+0000] {processor.py:161} INFO - Started process (PID=2172) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:22:33.590+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:22:33.593+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:22:33.593+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:22:33.769+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:22:33.829+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:22:33.828+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:22:33.890+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:22:33.889+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:22:33.908+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:22:33.908+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:22:34.001+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.421 seconds
+[2026-03-15T13:23:04.725+0000] {processor.py:161} INFO - Started process (PID=2183) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:23:04.728+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:23:04.732+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:23:04.731+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:23:04.937+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:23:05.027+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:23:05.026+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:23:05.108+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:23:05.107+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:23:05.122+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:23:05.121+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:23:05.196+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.500 seconds
+[2026-03-15T13:23:35.798+0000] {processor.py:161} INFO - Started process (PID=2194) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:23:35.801+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:23:35.806+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:23:35.805+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:23:35.983+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:23:36.041+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:23:36.041+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:23:36.088+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:23:36.088+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:23:36.097+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:23:36.097+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:23:36.158+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.372 seconds
+[2026-03-15T13:24:06.706+0000] {processor.py:161} INFO - Started process (PID=2205) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:24:06.709+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:24:06.714+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:24:06.713+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:24:06.886+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:24:06.946+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:24:06.946+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:24:06.993+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:24:06.993+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:24:07.003+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:24:07.003+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:24:07.059+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.369 seconds
+[2026-03-15T13:24:37.509+0000] {processor.py:161} INFO - Started process (PID=2217) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:24:37.513+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:24:37.521+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:24:37.519+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:24:37.723+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:24:37.843+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:24:37.842+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:24:37.934+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:24:37.934+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:24:37.953+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:24:37.952+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:24:38.011+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.532 seconds
+[2026-03-15T13:25:08.384+0000] {processor.py:161} INFO - Started process (PID=2228) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:25:08.386+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:25:08.389+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:25:08.389+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:25:08.531+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:25:08.597+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:25:08.597+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:25:08.657+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:25:08.656+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:25:08.667+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:25:08.667+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:25:08.728+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.355 seconds
+[2026-03-15T13:25:38.973+0000] {processor.py:161} INFO - Started process (PID=2233) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:25:38.975+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:25:38.980+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:25:38.979+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:25:39.158+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:25:39.277+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:25:39.277+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:25:39.427+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:25:39.427+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:25:39.439+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:25:39.439+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:25:39.487+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.529 seconds
+[2026-03-15T13:26:10.044+0000] {processor.py:161} INFO - Started process (PID=2245) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:26:10.047+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:26:10.052+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:26:10.052+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:26:10.300+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:26:10.383+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:26:10.383+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:26:10.449+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:26:10.448+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:26:10.462+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:26:10.461+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:26:10.532+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.514 seconds
+[2026-03-15T13:26:41.332+0000] {processor.py:161} INFO - Started process (PID=2256) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:26:41.335+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:26:41.341+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:26:41.340+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:26:41.600+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:26:41.684+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:26:41.684+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:26:41.749+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:26:41.749+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:26:41.762+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:26:41.761+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:26:41.831+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.524 seconds
+[2026-03-15T13:27:11.964+0000] {processor.py:161} INFO - Started process (PID=2268) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:27:11.966+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:27:11.970+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:27:11.969+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:27:12.168+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:27:12.232+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:27:12.232+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:27:12.289+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:27:12.289+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:27:12.301+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:27:12.300+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:27:12.363+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.414 seconds
+[2026-03-15T13:27:42.912+0000] {processor.py:161} INFO - Started process (PID=2279) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:27:42.914+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:27:42.918+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:27:42.917+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:27:43.060+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:27:43.119+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:27:43.118+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:27:43.171+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:27:43.171+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:27:43.182+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:27:43.182+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:27:43.239+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.345 seconds
+[2026-03-15T13:28:13.962+0000] {processor.py:161} INFO - Started process (PID=2290) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:28:13.964+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:28:13.967+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:28:13.966+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:28:14.114+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:28:14.183+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:28:14.183+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:28:14.245+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:28:14.244+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:28:14.257+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:28:14.257+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:28:14.328+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.377 seconds
+[2026-03-15T13:28:44.944+0000] {processor.py:161} INFO - Started process (PID=2302) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:28:44.947+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:28:44.950+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:28:44.950+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:28:45.107+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:28:45.158+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:28:45.157+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:28:45.200+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:28:45.200+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:28:45.208+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:28:45.208+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:28:45.266+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.341 seconds
+[2026-03-15T13:29:16.191+0000] {processor.py:161} INFO - Started process (PID=2313) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:29:16.193+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:29:16.196+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:29:16.195+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:29:16.460+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:29:16.538+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:29:16.537+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:29:16.599+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:29:16.599+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:29:16.611+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:29:16.611+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:29:16.697+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.516 seconds
+[2026-03-15T13:29:47.208+0000] {processor.py:161} INFO - Started process (PID=2324) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:29:47.211+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:29:47.215+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:29:47.215+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:29:47.358+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:29:47.425+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:29:47.425+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:29:47.482+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:29:47.482+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:29:47.495+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:29:47.495+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:29:47.571+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.389 seconds
+[2026-03-15T13:30:18.466+0000] {processor.py:161} INFO - Started process (PID=2335) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:30:18.468+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:30:18.471+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:30:18.471+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:30:18.602+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:30:18.651+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:30:18.651+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:30:18.691+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:30:18.691+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:30:18.698+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:30:18.698+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:30:18.760+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.304 seconds
+[2026-03-15T13:30:49.343+0000] {processor.py:161} INFO - Started process (PID=2340) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:30:49.349+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:30:49.353+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:30:49.352+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:30:49.542+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:30:49.608+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:30:49.608+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:30:49.668+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:30:49.668+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:30:49.679+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:30:49.679+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:30:49.749+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.445 seconds
+[2026-03-15T13:31:19.847+0000] {processor.py:161} INFO - Started process (PID=2351) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:31:19.850+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:31:19.853+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:31:19.853+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:31:20.067+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:31:20.139+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:31:20.139+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:31:20.191+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:31:20.191+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:31:20.201+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:31:20.200+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:31:20.302+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.468 seconds
+[2026-03-15T13:31:51.265+0000] {processor.py:161} INFO - Started process (PID=2363) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:31:51.269+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:31:51.275+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:31:51.274+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:31:51.550+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:31:51.640+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:31:51.640+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:31:51.717+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:31:51.717+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:31:51.736+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:31:51.736+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:31:51.817+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.569 seconds
+[2026-03-15T13:32:22.529+0000] {processor.py:161} INFO - Started process (PID=2375) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:32:22.537+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:32:22.549+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:32:22.546+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:32:22.788+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:32:22.843+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:32:22.843+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:32:22.910+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:32:22.909+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:32:22.924+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:32:22.924+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:32:23.009+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.526 seconds
+[2026-03-15T13:32:53.379+0000] {processor.py:161} INFO - Started process (PID=2386) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:32:53.381+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:32:53.385+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:32:53.384+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:32:53.638+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:32:53.776+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:32:53.775+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:32:53.854+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:32:53.854+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:32:53.867+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:32:53.867+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:32:53.929+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.561 seconds
+[2026-03-15T13:33:24.159+0000] {processor.py:161} INFO - Started process (PID=2397) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:33:24.162+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:33:24.166+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:33:24.165+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:33:24.343+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:33:24.408+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:33:24.408+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:33:24.471+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:33:24.471+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:33:24.484+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:33:24.484+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:33:24.570+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.428 seconds
+[2026-03-15T13:33:55.181+0000] {processor.py:161} INFO - Started process (PID=2409) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:33:55.188+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:33:55.199+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:33:55.197+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:33:55.520+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:33:55.634+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:33:55.633+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:33:55.707+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:33:55.707+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:33:55.718+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:33:55.718+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:33:57.129+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 1.990 seconds
+[2026-03-15T13:34:27.895+0000] {processor.py:161} INFO - Started process (PID=2420) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:34:27.897+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:34:27.900+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:34:27.900+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:34:28.061+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:34:28.116+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:34:28.116+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:34:28.169+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:34:28.169+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:34:28.179+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:34:28.178+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:34:28.233+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.352 seconds
+[2026-03-15T13:34:59.011+0000] {processor.py:161} INFO - Started process (PID=2431) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:34:59.015+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:34:59.024+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:34:59.022+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:34:59.367+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:34:59.468+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:34:59.468+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:34:59.547+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:34:59.546+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:34:59.561+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:34:59.560+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:34:59.642+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.660 seconds
+[2026-03-15T13:35:30.154+0000] {processor.py:161} INFO - Started process (PID=2443) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:35:30.156+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:35:30.160+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:35:30.159+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:35:30.357+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:35:30.438+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:35:30.438+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:35:30.515+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:35:30.515+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:35:30.529+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:35:30.529+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:35:31.081+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.942 seconds
+[2026-03-15T13:36:01.775+0000] {processor.py:161} INFO - Started process (PID=2454) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:36:01.778+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:36:01.800+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:36:01.798+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:36:02.076+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:36:02.165+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:36:02.164+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:36:02.214+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:36:02.213+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:36:02.223+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:36:02.222+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:36:02.288+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.534 seconds
+[2026-03-15T13:36:32.890+0000] {processor.py:161} INFO - Started process (PID=2459) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:36:32.894+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:36:32.901+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:36:32.900+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:36:33.055+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:36:33.108+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:36:33.107+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:36:33.158+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:36:33.158+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:36:33.167+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:36:33.167+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:36:33.237+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.396 seconds
+[2026-03-15T13:37:03.606+0000] {processor.py:161} INFO - Started process (PID=2470) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:37:03.608+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:37:03.613+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:37:03.612+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:37:03.747+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:37:03.801+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:37:03.800+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:37:04.184+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:37:04.184+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:37:04.194+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:37:04.193+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:37:04.248+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.524 seconds
+[2026-03-15T13:37:34.776+0000] {processor.py:161} INFO - Started process (PID=2481) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:37:34.778+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:37:34.781+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:37:34.781+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:37:34.933+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:37:35.380+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:37:35.380+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:37:35.442+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:37:35.441+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:37:35.452+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:37:35.452+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:37:35.511+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.750 seconds
+[2026-03-15T13:38:05.696+0000] {processor.py:161} INFO - Started process (PID=2492) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:38:05.698+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:38:05.701+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:38:05.700+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:38:05.875+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:38:05.926+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:38:05.926+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:38:05.977+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:38:05.976+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:38:05.985+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:38:05.985+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:38:06.030+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.343 seconds
+[2026-03-15T13:38:36.642+0000] {processor.py:161} INFO - Started process (PID=2503) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:38:36.646+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:38:36.652+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:38:36.651+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:38:36.811+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:38:36.859+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:38:36.859+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:38:37.103+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:38:37.103+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:38:37.119+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:38:37.118+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:38:37.206+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.584 seconds
+[2026-03-15T13:39:07.641+0000] {processor.py:161} INFO - Started process (PID=2514) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:39:07.642+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:39:07.645+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:39:07.645+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:39:07.767+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:39:08.020+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:39:08.019+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:39:08.062+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:39:08.062+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:39:08.071+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:39:08.071+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:39:08.122+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.490 seconds
+[2026-03-15T13:39:39.122+0000] {processor.py:161} INFO - Started process (PID=2525) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:39:39.127+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:39:39.136+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:39:39.135+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:39:39.625+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:39:39.772+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:39:39.772+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:39:39.871+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:39:39.871+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:39:39.887+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:39:39.887+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:39:39.989+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.898 seconds
+[2026-03-15T13:40:10.915+0000] {processor.py:161} INFO - Started process (PID=2537) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:40:10.917+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:40:10.919+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:40:10.919+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:40:11.101+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:40:11.177+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:40:11.177+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:40:11.402+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:40:11.401+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:40:11.412+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:40:11.412+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:40:11.471+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.566 seconds
+[2026-03-15T13:40:41.598+0000] {processor.py:161} INFO - Started process (PID=2548) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:40:41.601+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:40:41.608+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:40:41.607+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:40:41.786+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:40:42.173+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:40:42.173+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:40:42.241+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:40:42.241+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:40:42.253+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:40:42.252+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:40:42.312+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.737 seconds
+[2026-03-15T13:41:12.985+0000] {processor.py:161} INFO - Started process (PID=2553) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:41:12.987+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:41:12.992+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:41:12.991+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:41:13.198+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:41:13.285+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:41:13.285+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:41:13.334+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:41:13.334+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:41:13.343+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:41:13.343+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:41:13.393+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.424 seconds
+[2026-03-15T13:41:43.831+0000] {processor.py:161} INFO - Started process (PID=2564) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:41:43.832+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:41:43.836+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:41:43.835+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:41:43.977+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:41:44.067+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:41:44.067+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:41:44.413+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:41:44.413+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:41:44.423+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:41:44.423+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:41:44.471+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.652 seconds
+[2026-03-15T13:42:14.761+0000] {processor.py:161} INFO - Started process (PID=2576) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:42:14.764+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:42:14.771+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:42:14.770+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:42:15.053+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:42:15.394+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:42:15.393+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:42:15.454+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:42:15.454+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:42:15.467+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:42:15.466+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:42:15.546+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.806 seconds
+[2026-03-15T13:42:46.190+0000] {processor.py:161} INFO - Started process (PID=2587) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:42:46.193+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:42:46.199+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:42:46.198+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:42:46.466+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:42:46.580+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:42:46.579+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:42:46.663+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:42:46.662+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:42:46.671+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:42:46.671+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:42:46.721+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.552 seconds
+[2026-03-15T13:43:17.100+0000] {processor.py:161} INFO - Started process (PID=2598) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:43:17.101+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:43:17.104+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:43:17.104+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:43:17.260+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:43:17.318+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:43:17.318+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:43:17.576+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:43:17.576+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:43:17.587+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:43:17.587+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:43:17.641+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.559 seconds
+[2026-03-15T13:43:48.319+0000] {processor.py:161} INFO - Started process (PID=2610) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:43:48.322+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:43:48.326+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:43:48.325+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:43:48.569+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:43:49.006+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:43:49.006+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:43:49.057+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:43:49.057+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:43:49.067+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:43:49.067+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:43:49.124+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.822 seconds
+[2026-03-15T13:44:19.971+0000] {processor.py:161} INFO - Started process (PID=2621) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:44:19.974+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:44:19.979+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:44:19.978+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:44:20.111+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:44:20.172+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:44:20.171+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:44:20.226+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:44:20.226+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:44:20.236+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:44:20.235+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:44:20.295+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.345 seconds
+[2026-03-15T13:44:50.474+0000] {processor.py:161} INFO - Started process (PID=2632) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:44:50.475+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:44:50.478+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:44:50.478+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:44:50.626+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:44:50.682+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:44:50.682+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:44:50.935+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:44:50.935+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:44:50.948+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:44:50.948+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:44:51.005+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.541 seconds
+[2026-03-15T13:45:21.243+0000] {processor.py:161} INFO - Started process (PID=2643) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:45:21.244+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:45:21.247+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:45:21.246+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:45:21.381+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:45:21.651+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:45:21.651+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:45:21.694+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:45:21.694+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:45:21.703+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:45:21.703+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:45:21.757+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.525 seconds
+[2026-03-15T13:45:52.279+0000] {processor.py:161} INFO - Started process (PID=2655) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:45:52.282+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:45:52.287+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:45:52.286+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:45:52.456+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:45:52.529+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:45:52.529+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:45:52.593+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:45:52.593+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:45:52.605+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:45:52.605+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:45:52.684+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.427 seconds
+[2026-03-15T13:46:22.775+0000] {processor.py:161} INFO - Started process (PID=2660) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:46:22.777+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:46:22.780+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:46:22.780+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:46:22.924+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:46:23.044+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:46:23.043+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:46:23.108+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:46:23.107+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:46:23.118+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:46:23.117+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:46:23.169+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.405 seconds
+[2026-03-15T13:46:53.788+0000] {processor.py:161} INFO - Started process (PID=2671) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:46:53.790+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:46:53.795+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:46:53.794+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:46:53.963+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:46:54.050+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:46:54.049+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:46:54.122+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:46:54.121+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:46:54.137+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:46:54.136+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:46:54.203+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.428 seconds
+[2026-03-15T13:47:24.335+0000] {processor.py:161} INFO - Started process (PID=2682) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:47:24.337+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:47:24.340+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:47:24.340+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:47:24.499+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:47:24.547+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:47:24.546+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:47:24.591+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:47:24.591+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:47:24.600+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:47:24.600+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:47:24.666+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.340 seconds
+[2026-03-15T13:47:55.109+0000] {processor.py:161} INFO - Started process (PID=2693) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:47:55.112+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:47:55.115+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:47:55.115+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:47:55.305+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:47:55.361+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:47:55.361+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:47:55.415+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:47:55.415+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:47:55.424+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:47:55.424+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:47:55.478+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.384 seconds
+[2026-03-15T13:48:26.227+0000] {processor.py:161} INFO - Started process (PID=2704) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:48:26.229+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:48:26.232+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:48:26.231+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:48:26.393+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_daily', 'smartstay_hickstead_retrain' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:48:26.462+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:48:26.461+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:48:26.530+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:48:26.529+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:48:26.546+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:48:26.546+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:48:26.649+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.433 seconds
+[2026-03-15T13:48:57.302+0000] {processor.py:161} INFO - Started process (PID=2715) to work on /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:48:57.305+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/09_airflow_dag.py for tasks to queue
+[2026-03-15T13:48:57.311+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:48:57.310+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:48:57.455+0000] {processor.py:840} INFO - DAG(s) 'smartstay_hickstead_retrain', 'smartstay_hickstead_daily' retrieved from /opt/airflow/dags/09_airflow_dag.py
+[2026-03-15T13:48:57.509+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:48:57.509+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2026-03-15T13:48:57.557+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:48:57.557+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_daily to 2026-03-15 06:00:00+00:00, run_after=2026-03-16 06:00:00+00:00
+[2026-03-15T13:48:57.566+0000] {logging_mixin.py:188} INFO - [2026-03-15T13:48:57.566+0000] {dag.py:3954} INFO - Setting next_dagrun for smartstay_hickstead_retrain to 2026-03-09 07:00:00+00:00, run_after=2026-03-16 07:00:00+00:00
+[2026-03-15T13:48:57.624+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/09_airflow_dag.py took 0.365 seconds

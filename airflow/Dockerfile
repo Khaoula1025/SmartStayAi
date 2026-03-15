@@ -13,12 +13,15 @@ RUN pip install --no-cache-dir prophet==1.1.5
 
 # SmartStay runtime dependencies
 RUN pip install --no-cache-dir \
-    pandas==2.2.1 \
+    pandas==2.2.2 \
     numpy==1.26.4 \
     scikit-learn>=1.4.0 \
+    lightgbm \
     joblib \
     psycopg2-binary \
     openpyxl \
     xlrd \
     python-dotenv \
-    cryptography
+    cryptography \
+    pyarrow \
+    shap
