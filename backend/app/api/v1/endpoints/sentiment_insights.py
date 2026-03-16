@@ -1,15 +1,9 @@
-"""
-backend/app/api/v1/endpoints/sentiment_insights.py
-GET /api/v1/sentiment/insights        — AI-generated improvement report
-DELETE /api/v1/sentiment/insights/cache — force regenerate
-"""
-
 import json
 import os
 from pathlib import Path
 
 from fastapi import APIRouter, HTTPException, Depends
-from app.deps import get_current_user
+from app.api.deps import get_current_user
 
 insightsRouter = APIRouter(prefix="/sentiment", tags=["Sentiment"])
 

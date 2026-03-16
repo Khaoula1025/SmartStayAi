@@ -53,6 +53,7 @@ dependencies = [
     "shap>=0.51.0",
     "apify-client>=2.5.0",
     "vadersentiment>=3.3.2",
+    "google-generativeai>=0.8.6",
 ]
 
 [project.optional-dependencies]
