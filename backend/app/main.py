@@ -12,6 +12,8 @@ from app.db.init_db import init_db
 from app.api.v1.endpoints.explain      import explainRouter
 from app.api.v1.endpoints.seasonality  import seasonalityRouter
 from app.api.v1.endpoints.sentiment import sentimentRouter
+from app.api.v1.endpoints.sentiment_insights import insightsRouter
+
 
 app = FastAPI(title="SmartStay Intelligence API")
 
@@ -39,6 +41,7 @@ app.include_router(dashboardRouter,  prefix="/api/v1")
 app.include_router(explainRouter,    prefix="/api/v1")
 app.include_router(seasonalityRouter, prefix="/api/v1")
 app.include_router(sentimentRouter, prefix="/api/v1")
+app.include_router(insightsRouter, prefix="/api/v1")
 @app.get("/")
 def root():
     return {"message": "SmartStay Intelligence API"}
