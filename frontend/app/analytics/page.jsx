@@ -126,6 +126,13 @@ export default function AnalyticsPage() {
     return null;
   };
 
+  const bestRun = useMemo(() => {
+    if (!historyData || historyData.length === 0) return null;
+    return [...historyData]
+      .filter(r => r.occ_accuracy_pct != null)
+      .sort((a, b) => b.occ_accuracy_pct - a.occ_accuracy_pct)[0];
+  }, [historyData]);
+
   const getRunIdDisplay = (id) => {
     if (!id) return '-';
     return id.substring(0, 8);
@@ -188,59 +195,81 @@ export default function AnalyticsPage() {
             <div className="bg-white rounded-xl shadow-sm border border-border p-12 min-h-[400px] flex items-center justify-center">
               <LoadingSpinner text="Computing performance metrics..." />
             </div>
-          ) : noActuals ? (
+          ) : historyData.length === 0 ? (
             <EmptyState
               icon={BarChart2}
-              title="No Actuals Data"
-              description="No actuals have been loaded into the system yet, so we cannot calculate accuracy metrics. Ask an admin to run POST /actuals/load after uploading clean_occupancy.csv."
+              title="No Model History"
+              description="No models have been trained or tracked in the system yet."
             />
           ) : (
             <>
             {/* Summary Stat Pills */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              <div className="bg-white p-5 rounded-xl shadow-sm border border-border">
-                <p className="text-sm font-medium text-text-muted uppercase tracking-wider flex items-center mb-2">
-                  <Target className="w-4 h-4 mr-2" /> Mean Abs Error (MAE)
-                </p>
-                <div className="flex items-baseline gap-2">
-                  <p className="text-4xl font-bold tracking-tight tabular-nums text-text-dark">
-                    {accuracyData?.mean_abs_error_pp != null ? accuracyData.mean_abs_error_pp.toFixed(1) : '-'}
+            {!noActuals && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div className="bg-white p-5 rounded-xl shadow-sm border border-border">
+                  <p className="text-sm font-medium text-text-muted uppercase tracking-wider flex items-center mb-2">
+                    <Target className="w-4 h-4 mr-2" /> Mean Abs Error (MAE)
                   </p>
-                  <span className="text-lg font-medium text-text-muted">pp</span>
+                  <div className="flex items-baseline gap-2">
+                    <p className="text-4xl font-bold tracking-tight tabular-nums text-text-dark">
+                      {accuracyData?.mean_abs_error_pp != null ? accuracyData.mean_abs_error_pp.toFixed(1) : '-'}
+                    </p>
+                    <span className="text-lg font-medium text-text-muted">pp</span>
+                  </div>
                 </div>
-              </div>
-              
-              <div className="bg-white p-5 rounded-xl shadow-sm border border-border">
-                <p className="text-sm font-medium text-text-muted uppercase tracking-wider flex items-center mb-2">
-                  <TrendingUp className="w-4 h-4 mr-2" /> % Within CI
-                </p>
-                <div className="flex items-baseline gap-2">
-                  <p className="text-4xl font-bold tracking-tight text-navy tabular-nums">
-                    {formatPercent(accuracyData?.within_ci_pct)}
+                
+                <div className="bg-white p-5 rounded-xl shadow-sm border border-border">
+                  <p className="text-sm font-medium text-text-muted uppercase tracking-wider flex items-center mb-2">
+                    <TrendingUp className="w-4 h-4 mr-2" /> % Within CI
                   </p>
+                  <div className="flex items-baseline gap-2">
+                    <p className="text-4xl font-bold tracking-tight text-navy tabular-nums">
+                      {formatPercent(accuracyData?.within_ci_pct)}
+                    </p>
+                  </div>
                 </div>
-              </div>
-              
-              <div className="bg-white p-5 rounded-xl shadow-sm border border-border">
-                <p className="text-sm font-medium text-text-muted uppercase tracking-wider flex items-center mb-2">
-                  <AlertTriangle className="w-4 h-4 text-warning mr-2" /> Worst Tier
-                </p>
-                <p className="text-2xl font-bold capitalize text-text-dark mb-1">
-                  {accuracyData?.worst_tier || '-'}
-                </p>
-                <p className="text-sm text-text-muted">Highest error rate</p>
-              </div>
+                
+                <div className="bg-white p-5 rounded-xl shadow-sm border border-border">
+                  <p className="text-sm font-medium text-text-muted uppercase tracking-wider flex items-center mb-2">
+                    <AlertTriangle className="w-4 h-4 text-warning mr-2" /> Worst Tier
+                  </p>
+                  <p className="text-2xl font-bold capitalize text-text-dark mb-1">
+                    {accuracyData?.worst_tier || '-'}
+                  </p>
+                  <p className="text-sm text-text-muted">Highest error rate</p>
+                </div>
 
-              <div className="bg-white p-5 rounded-xl shadow-sm border border-border">
-                <p className="text-sm font-medium text-text-muted uppercase tracking-wider flex items-center mb-2">
-                  <Badge label="Best Tier" variant="success" className="mr-2" />
-                </p>
-                <p className="text-2xl font-bold capitalize text-text-dark mb-1">
-                  {accuracyData?.best_tier || '-'}
-                </p>
-                <p className="text-sm text-text-muted">Most consistent accuracy</p>
+                <div className="bg-white p-5 rounded-xl shadow-sm border border-border">
+                  <p className="text-sm font-medium text-text-muted uppercase tracking-wider flex items-center mb-2">
+                    <Badge label="Best Tier" variant="success" className="mr-2" />
+                  </p>
+                  <p className="text-2xl font-bold capitalize text-text-dark mb-1">
+                    {accuracyData?.best_tier || '-'}
+                  </p>
+                  <p className="text-sm text-text-muted">Most consistent accuracy</p>
+                </div>
               </div>
-            </div>
+            )}
+
+            {/* Model History Summary Card */}
+            {bestRun && (
+              <div className="mt-6 mb-4 p-5 bg-[#FEF9EC] border border-gold rounded-xl flex items-center justify-between text-navy shadow-sm">
+                <div className="flex items-center gap-4">
+                  <div className="p-2.5 bg-gold/20 rounded-lg">
+                    <Star className="w-5 h-5 text-gold-dark fill-current" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-bold">Champion Model Performance</p>
+                    <p className="text-xs text-text-muted">Best historical run from {new Date(bestRun.trained_at).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}</p>
+                  </div>
+                </div>
+                <div className="font-bold text-sm md:text-base">
+                  Best Model: <span className="text-gold-darker">{formatPercent(bestRun.occ_accuracy_pct)} accuracy</span> 
+                  <span className="mx-2 text-border">|</span> MAE: {bestRun.mae_operational != null ? Number(bestRun.mae_operational).toFixed(4) : '-'} 
+                  <span className="mx-2 text-border">|</span> {bestRun.n_prediction_rows || 0} training rows
+                </div>
+              </div>
+            )}
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
               {/* Accuracy Chart */}
@@ -372,6 +401,7 @@ export default function AnalyticsPage() {
                     <tr>
                       <th className="px-5 py-3 font-semibold">Run ID</th>
                       <th className="px-5 py-3 font-semibold">Trained Date</th>
+                      <th className="px-5 py-3 font-semibold">Model Type</th>
                       <th className="px-5 py-3 font-semibold text-right">MAE</th>
                       <th className="px-5 py-3 font-semibold text-right">Accuracy %</th>
                       <th className="px-5 py-3 font-semibold text-center">Promoted</th>
@@ -379,18 +409,24 @@ export default function AnalyticsPage() {
                   </thead>
                   <tbody className="divide-y divide-border">
                     {historyData && historyData.length > 0 ? historyData.map((hist, idx) => (
-                      <tr key={idx} className={`transition-colors ${hist.promoted ? 'bg-gold/5 hover:bg-gold/10' : 'hover:bg-surface/50'}`}>
+                      <tr 
+                        key={idx} 
+                        className={`transition-colors border-l-4 ${hist.occ_accuracy_pct != null ? 'border-l-gold bg-gold/5' : 'border-l-transparent'} ${hist.promoted ? 'bg-gold/5 hover:bg-gold/10' : 'hover:bg-surface/50'}`}
+                      >
                         <td className="px-5 py-3 font-mono text-xs text-text-dark">
                           {getRunIdDisplay(hist.run_id)}
                         </td>
                         <td className="px-5 py-3 text-text-muted">
                           {hist.trained_at ? new Date(hist.trained_at).toLocaleString('en-GB', { dateStyle: 'medium', timeStyle: 'short' }) : '-'}
                         </td>
+                        <td className="px-5 py-3">
+                          <Badge label={hist.model_type || 'Daily Rescore'} variant={hist.model_type === 'retrain' ? 'success' : 'muted'} className="text-[10px] uppercase font-bold" />
+                        </td>
                         <td className="px-5 py-3 text-right tabular-nums">
-                          {formatError(hist.mae_operational)}
+                          {hist.mae_operational != null ? formatError(hist.mae_operational) : '-'}
                         </td>
                         <td className="px-5 py-3 text-right tabular-nums font-semibold">
-                          {formatPercent(hist.occ_accuracy_pct)}
+                          {hist.occ_accuracy_pct != null ? formatPercent(hist.occ_accuracy_pct) : '-'}
                         </td>
                         <td className="px-5 py-3 text-center">
                           {hist.promoted ? (
@@ -404,7 +440,7 @@ export default function AnalyticsPage() {
                       </tr>
                     )) : (
                       <tr>
-                        <td colSpan="5" className="px-5 py-8 text-center text-text-muted">
+                        <td colSpan="6" className="px-5 py-8 text-center text-text-muted">
                           No model history available.
                         </td>
                       </tr>
@@ -413,8 +449,9 @@ export default function AnalyticsPage() {
                 </table>
               </div>
             </div>
-          </>
-        )) : (
+            </>
+          )
+        ) : (
           isFetchingSeasonality ? (
             <div className="bg-white rounded-xl shadow-sm border border-border p-12 min-h-[400px] flex items-center justify-center">
               <LoadingSpinner text="Analyzing demand cycles..." />

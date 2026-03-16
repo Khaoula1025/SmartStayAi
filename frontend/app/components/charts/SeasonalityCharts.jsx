@@ -92,7 +92,7 @@ export default function SeasonalityCharts({ data }) {
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={weekly} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
               <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#E2E8F0" />
-              <XAxis dataKey="day" axisLine={false} tickLine={false} tick={{ fill: '#94A3B8', fontSize: 12 }} />
+              <XAxis dataKey="day_short" axisLine={false} tickLine={false} tick={{ fill: '#94A3B8', fontSize: 12 }} />
               <YAxis axisLine={false} tickLine={false} tick={{ fill: '#94A3B8', fontSize: 12 }} />
               <ReferenceLine y={0} stroke="#1C2B4A" strokeDasharray="3 3" />
               <Tooltip 
@@ -114,7 +114,7 @@ export default function SeasonalityCharts({ data }) {
                 {weekly.map((entry, index) => (
                   <Cell 
                     key={`cell-${index}`} 
-                    fill={entry.effect_pp > 0 ? '#C9A84C' : '#94A3B8'} 
+                    fill={entry.effect_pp > 0 ? '#C9A84C' : '#1C2B4A'} 
                   />
                 ))}
               </Bar>
@@ -142,23 +142,25 @@ export default function SeasonalityCharts({ data }) {
               <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#E2E8F0" />
               <XAxis 
                 dataKey="date" 
+                type="category"
+                interval={11}
                 axisLine={false} 
                 tickLine={false} 
                 tick={{ fill: '#94A3B8', fontSize: 10 }}
-                tickFormatter={(v) => {
-                  const d = new Date(v);
-                  if (isNaN(d)) return v;
-                  return d.toLocaleDateString('en-GB', { month: 'short', year: '2-digit' });
+                tickFormatter={(val) => {
+                  const [y, m] = val.split('-')
+                  const months = ['Jan','Feb','Mar','Apr','May','Jun',
+                                  'Jul','Aug','Sep','Oct','Nov','Dec']
+                  return `${months[parseInt(m)-1]} ${y.slice(2)}`
                 }}
               />
               <YAxis domain={[0, 100]} axisLine={false} tickLine={false} tick={{ fill: '#94A3B8', fontSize: 12 }} />
               <Tooltip 
                 content={({ active, payload, label }) => {
                   if (active && payload && payload.length) {
-                    const d = new Date(label);
                     return (
                       <div className="bg-white p-2 border border-border shadow-lg rounded text-xs">
-                        <p className="font-bold text-navy">{isNaN(d) ? label : d.toLocaleDateString('en-GB', { month: 'long', year: 'numeric' })}</p>
+                        <p className="font-bold text-navy">{label}</p>
                         <p className="text-text-dark">Trend: {payload[0].value}%</p>
                       </div>
                     );
@@ -166,20 +168,17 @@ export default function SeasonalityCharts({ data }) {
                   return null;
                 }}
               />
-              <ReferenceLine x="2026-01-01" stroke="#E53E3E" strokeDasharray="3 3" label={{ position: 'top', value: '2026 Forecast', fill: '#E53E3E', fontSize: 10 }} />
-              <Line 
-                type="monotone" 
-                dataKey="trend" 
-                stroke="#1C2B4A" 
-                strokeWidth={2.5} 
-                dot={false} 
+              <ReferenceLine 
+                x={trend.find(d => d.is_forecast)?.date} 
+                stroke="#C9A84C" 
+                strokeDasharray="3 3" 
+                label={{ position: 'top', value: '2026 Forecast', fill: '#C9A84C', fontSize: 10 }} 
               />
               <Line 
                 type="monotone" 
-                dataKey="forecast" 
-                stroke="#C9A84C" 
-                strokeWidth={2} 
-                strokeDasharray="5 5" 
+                dataKey="trend_pct" 
+                stroke="#1C2B4A" 
+                strokeWidth={2.5} 
                 dot={false} 
               />
             </ComposedChart>
@@ -217,14 +216,17 @@ export default function SeasonalityCharts({ data }) {
 
         <div className="h-[300px] w-full">
           <ResponsiveContainer width="100%" height="100%">
-            <ComposedChart data={comparison_stats.forecast_data || []} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+            <ComposedChart 
+              data={(comparison_stats.forecast_data || []).filter((_, i) => i % 7 === 0)} 
+              margin={{ top: 10, right: 10, left: -20, bottom: 0 }}
+            >
               <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#E2E8F0" />
               <XAxis 
                 dataKey="date" 
+                type="category"
                 axisLine={false} 
                 tickLine={false} 
                 tick={{ fill: '#94A3B8', fontSize: 10 }}
-                interval={30}
               />
               <YAxis domain={[0, 100]} axisLine={false} tickLine={false} tick={{ fill: '#94A3B8', fontSize: 12 }} />
               <Tooltip 
@@ -237,18 +239,17 @@ export default function SeasonalityCharts({ data }) {
                         <div className="space-y-1.5">
                           <p className="flex justify-between">
                             <span className="text-text-muted">GBM+RF:</span>
-                            <span className="font-bold text-navy">{data.predicted_occ}%</span>
+                            <span className="font-bold text-navy">{data.gbm_occ_pct}%</span>
                           </p>
                           <p className="flex justify-between">
                             <span className="text-text-muted">Prophet:</span>
-                            <span className="font-bold text-gold">{data.prophet_occ}%</span>
+                            <span className="font-bold text-gold">{data.prophet_occ_pct}%</span>
                           </p>
                           <p className="flex justify-between border-t border-border pt-1 mt-1 font-bold">
                             <span className="text-text-muted">Gap:</span>
-                            <span className={data.gap > 0 ? 'text-navy' : 'text-gold'}>{Math.abs(data.gap)}pp</span>
-                          </p>
-                          <p className="text-[10px] text-center pt-1 italic text-text-muted">
-                            Models agree: {data.agree ? 'Yes' : 'No'}
+                            <span className={data.gbm_occ_pct - data.prophet_occ_pct > 0 ? 'text-navy' : 'text-gold'}>
+                              {Math.abs((data.gbm_occ_pct - data.prophet_occ_pct).toFixed(1))}pp
+                            </span>
                           </p>
                         </div>
                       </div>
@@ -258,25 +259,9 @@ export default function SeasonalityCharts({ data }) {
                 }}
               />
               <Legend verticalAlign="top" height={36} iconType="circle" />
-              <Area 
-                type="monotone" 
-                dataKey="occ_high" 
-                name="GBM CI"
-                stroke="none" 
-                fill="#1C2B4A" 
-                fillOpacity={0.1} 
-              />
-              <Area 
-                type="monotone" 
-                dataKey="occ_low" 
-                name="CI Lower"
-                stroke="none" 
-                fill="#FFFFFF" 
-                fillOpacity={1} 
-              />
               <Line 
                 type="monotone" 
-                dataKey="predicted_occ" 
+                dataKey="gbm_occ_pct" 
                 name="GBM+RF ensemble" 
                 stroke="#1C2B4A" 
                 strokeWidth={2} 
@@ -284,7 +269,7 @@ export default function SeasonalityCharts({ data }) {
               />
               <Line 
                 type="monotone" 
-                dataKey="prophet_occ" 
+                dataKey="prophet_occ_pct" 
                 name="Prophet" 
                 stroke="#C9A84C" 
                 strokeWidth={1.5} 
