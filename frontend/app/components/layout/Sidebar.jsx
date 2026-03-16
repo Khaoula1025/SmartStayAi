@@ -2,7 +2,7 @@
 
 import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { LayoutDashboard, TrendingUp, DollarSign, BarChart2, Activity, LogOut } from 'lucide-react';
+import { LayoutDashboard, TrendingUp, DollarSign, BarChart2, Activity, LogOut, MessageSquare } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 
 const navItems = [
@@ -10,6 +10,7 @@ const navItems = [
   { name: 'Forecast', path: '/forecast', icon: TrendingUp },
   { name: 'Rate Decisions', path: '/rates', icon: DollarSign },
   { name: 'Analytics', path: '/analytics', icon: BarChart2 },
+  { name: 'Sentiment', path: '/sentiment', icon: MessageSquare },
   { name: 'Pipeline', path: '/pipeline', icon: Activity },
 ];
 

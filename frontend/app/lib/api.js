@@ -114,3 +114,7 @@ export async function getShapExplanation(date) {
 export async function getSeasonality() {
   return fetchWithAuth('/analytics/seasonality/', { method: 'GET' });
 }
+
+export async function getSentimentSummary() {
+  return fetchWithAuth('/sentiment/summary', { method: 'GET' });
+}
