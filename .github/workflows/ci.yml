@@ -40,20 +40,22 @@ jobs:
 
       - name: Create backend/.env for CI
         run: |
-          cat > backend/.env << 'ENVEOF'
-          POSTGRES_USER=postgres
-          POSTGRES_PASSWORD=0000
-          POSTGRES_PORT=5432
-          SMARTSTAY_DB=SmartStayAi
-          AIRFLOW_DB=airflow
-          AIRFLOW_ADMIN_USER=admin
-          AIRFLOW_ADMIN_PASSWORD=admin123
-          AIRFLOW_FERNET_KEY=ci_fernet_key
-          AIRFLOW_SECRET_KEY=ci_secret_key
-          GOOGLE_API_KEY=ci_placeholder
-          APIFY_TOKEN=ci_placeholder
-          secret=test_secret_key_for_ci
-          ENVEOF
+          printf '%s\n' \
+            'POSTGRES_USER=postgres' \
+            'POSTGRES_PASSWORD=0000' \
+            'POSTGRES_PORT=5432' \
+            'SMARTSTAY_DB=SmartStayAi' \
+            'AIRFLOW_DB=airflow' \
+            'AIRFLOW_ADMIN_USER=admin' \
+            'AIRFLOW_ADMIN_PASSWORD=admin123' \
+            'AIRFLOW_FERNET_KEY=ci_fernet_key' \
+            'AIRFLOW_SECRET_KEY=ci_secret_key' \
+            'GOOGLE_API_KEY=ci_placeholder' \
+            'APIFY_TOKEN=ci_placeholder' \
+            'secret=test_secret_key_for_ci' \
+            > backend/.env
+          echo "backend/.env written:"
+          cat backend/.env
 
       - name: Create DB tables and seed test user
         run: |
