@@ -33,13 +33,17 @@ jobs:
 
       - name: Write .env
         run: |
-          echo "DB_USER=postgres"       > backend/.env
-          echo "DB_PASSWORD=0000"      >> backend/.env
-          echo "DB_HOST=localhost"     >> backend/.env
-          echo "DB_PORT=5432"          >> backend/.env
-          echo "DB_NAME=SmartStayAi"   >> backend/.env
-          echo "secret=ci_secret_key"  >> backend/.env
-          cat backend/.env
+          cat > .env << EOF
+          DB_USER=postgres
+          DB_PASSWORD=0000
+          DB_HOST=localhost
+          DB_PORT=5432
+          DB_NAME=SmartStayAi
+          secret=ci_secret_key
+          EOF
+          # Write to both locations — load_dotenv() searches from cwd
+          cp .env backend/.env
+          cat .env
 
       - name: Seed DB
         run: |
