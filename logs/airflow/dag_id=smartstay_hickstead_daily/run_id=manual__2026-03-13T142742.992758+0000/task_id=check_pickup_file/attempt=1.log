@@ -1,0 +1,22 @@
+[2026-03-13T14:27:44.101+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-13T14:27:44.196+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: smartstay_hickstead_daily.check_pickup_file manual__2026-03-13T14:27:42.992758+00:00 [queued]>
+[2026-03-13T14:27:44.212+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: smartstay_hickstead_daily.check_pickup_file manual__2026-03-13T14:27:42.992758+00:00 [queued]>
+[2026-03-13T14:27:44.216+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2026-03-13T14:27:44.236+0000] {taskinstance.py:2330} INFO - Executing <Task(BranchPythonOperator): check_pickup_file> on 2026-03-13 14:27:42.992758+00:00
+[2026-03-13T14:27:44.243+0000] {standard_task_runner.py:63} INFO - Started process 811 to run task
+[2026-03-13T14:27:44.248+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'smartstay_hickstead_daily', 'check_pickup_file', 'manual__2026-03-13T14:27:42.992758+00:00', '--job-id', '46', '--raw', '--subdir', 'DAGS_FOLDER/09_airflow_dag.py', '--cfg-path', '/tmp/tmpr26z50p5']
+[2026-03-13T14:27:44.252+0000] {standard_task_runner.py:91} INFO - Job 46: Subtask check_pickup_file
+[2026-03-13T14:27:44.462+0000] {task_command.py:426} INFO - Running <TaskInstance: smartstay_hickstead_daily.check_pickup_file manual__2026-03-13T14:27:42.992758+00:00 [running]> on host 2ece018fe502
+[2026-03-13T14:27:44.761+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='revenue@unhotels.co.uk' AIRFLOW_CTX_DAG_OWNER='smartstay' AIRFLOW_CTX_DAG_ID='smartstay_hickstead_daily' AIRFLOW_CTX_TASK_ID='check_pickup_file' AIRFLOW_CTX_EXECUTION_DATE='2026-03-13T14:27:42.992758+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-13T14:27:42.992758+00:00'
+[2026-03-13T14:27:44.763+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-13T14:27:44.783+0000] {baseoperator.py:399} WARNING - BranchPythonOperator.execute cannot be called outside TaskInstance!
+[2026-03-13T14:27:44.991+0000] {09_airflow_dag.py:98} INFO - Fresh pickup file found: Uno_Hotels_Pickup_13_03_2026.xlsx
+[2026-03-13T14:27:45.075+0000] {python.py:237} INFO - Done. Returned value was: rescore_fresh
+[2026-03-13T14:27:45.076+0000] {branch.py:36} INFO - Branch into rescore_fresh
+[2026-03-13T14:27:45.077+0000] {skipmixin.py:178} INFO - Following branch rescore_fresh
+[2026-03-13T14:27:45.194+0000] {skipmixin.py:246} INFO - Skipping tasks [('rescore_stale', -1)]
+[2026-03-13T14:27:45.307+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-13T14:27:45.423+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=smartstay_hickstead_daily, task_id=check_pickup_file, run_id=manual__2026-03-13T14:27:42.992758+00:00, execution_date=20260313T142742, start_date=20260313T142744, end_date=20260313T142745
+[2026-03-13T14:27:45.485+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-13T14:27:45.568+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-13T14:27:45.574+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

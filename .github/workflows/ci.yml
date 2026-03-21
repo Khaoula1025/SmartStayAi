@@ -1,0 +1,65 @@
+name: CI — SmartStay Intelligence
+
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: "0000"
+          POSTGRES_DB: SmartStayAi
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install uv && uv sync
+
+      - name: Write .env
+        run: |
+          cat > .env << EOF
+          DB_USER=postgres
+          DB_PASSWORD=0000
+          DB_HOST=localhost
+          DB_PORT=5432
+          DB_NAME=SmartStayAi
+          secret=ci_secret_key
+          EOF
+          # Write to both locations — load_dotenv() searches from cwd
+          cp .env backend/.env
+          cat .env
+
+      - name: Seed DB
+        run: |
+          uv run python -c "
+          import sys; sys.path.insert(0, 'backend')
+          from app.db.session import engine, Base, SessionLocal
+          from app.models.user import User
+          from app.core.security import hash_password
+          Base.metadata.create_all(bind=engine)
+          db = SessionLocal()
+          if not db.query(User).filter(User.username == 'test').first():
+              db.add(User(username='test', email='test@ci.com', password=hash_password('12345678')))
+              db.commit()
+          db.close()
+          print('DB seeded')
+          "
+
+      - name: Run tests
+        run: PYTHONUTF8=1 uv run pytest tests/test_api.py -v --tb=short

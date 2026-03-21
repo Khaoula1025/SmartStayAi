@@ -1,0 +1,42 @@
+{
+  "overall_assessment": "The Hickstead Hotel generally maintains a high positive review rate (92.1%) and a solid average star rating (3.97/5) over its operational history. However, there's a critical and alarming decline in guest sentiment and star ratings in late 2025, indicating a significant recent deterioration in guest experience.",
+  "strengths": [
+    {
+      "title": "Friendly & Accommodating Staff",
+      "detail": "Many guests praise the hotel staff for being 'fabulous', 'friendly, efficient', and 'very accommodating', contributing positively to their stay experience."
+    },
+    {
+      "title": "Good Value & Deals",
+      "detail": "The hotel is often seen as 'very good value', with guests appreciating package deals that include dinner, wine, and breakfast, enhancing the overall perceived worth."
+    },
+    {
+      "title": "Convenient & Peaceful Location",
+      "detail": "Its location is highlighted as 'great peaceful' and convenient, being just 20 minutes from Brighton and close to the Hickstead Showground, making it easy to find."
+    }
+  ],
+  "improvement_areas": [
+    {
+      "title": "Cleanliness & Hygiene",
+      "priority": "high",
+      "detail": "Multiple recent negative reviews describe rooms as 'filthy', 'fusty', and 'stunk so bad', with 'dirty seating' and a 'general unhygienic place' in common areas.",
+      "recommendation": "Implement a rigorous, documented deep cleaning schedule for all rooms and public areas, including soft furnishings. Conduct regular inspections and provide staff training on advanced hygiene protocols."
+    },
+    {
+      "title": "Property Maintenance & Condition",
+      "priority": "high",
+      "detail": "Guests report the hotel 'needs lots of TLC', with 'overgrown and generally unkempt' outdoor areas, a 'rundown interior', and functional issues like non-working plug sockets in rooms.",
+      "recommendation": "Conduct an immediate comprehensive property audit to identify and prioritize all necessary repairs and refurbishments, focusing on guest rooms, common areas, and exterior landscaping. Allocate budget for ongoing preventative maintenance."
+    },
+    {
+      "title": "Front Desk Service Consistency",
+      "priority": "medium",
+      "detail": "While overall staff are praised, specific feedback mentions an 'unwelcoming and unaccommodating' receptionist who was 'miserable with no customer service skills'.",
+      "recommendation": "Provide targeted customer service training for all front-desk staff, emphasizing a welcoming demeanor, effective problem-solving, and consistent guest interaction standards."
+    }
+  ],
+  "recent_concern": "The hotel experienced a severe decline in guest satisfaction in late 2025, with sentiment scores plummeting to as low as 0.077 and negative reviews reaching 50% in July. This indicates a critical and recent failure in meeting guest expectations, likely driven by the persistent issues of cleanliness and maintenance, which are now significantly impacting the guest experience.",
+  "revenue_impact": "Addressing the critical issues of cleanliness and property maintenance will directly improve guest satisfaction and star ratings, leading to enhanced online reputation. This, in turn, will attract more bookings, allow for potential rate increases, and ultimately boost occupancy and RevPAR.",
+  "generated_at": "2026-03-16T15:14:46.235380",
+  "from_cache": false,
+  "model": "gemini-2.5-flash"
+}

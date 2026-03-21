@@ -1,113 +1,49 @@
-from fastapi import APIRouter, Depends , HTTPException
-from fastapi.security import HTTPBearer
-from sqlalchemy import text
+from datetime import date
+from typing import List, Optional
+
+from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-from app.api.deps import get_current_user 
-from app.schemas.prediction import PredictionResponse , TripFeatures
-from datetime import datetime
+
 from app.db.session import get_db
-# from app.core import ml_model
+from app.api.deps import get_current_user
+from app.models.user import User
+from app.schemas.prediction import PredictionOut, ModelRunOut
+from app.services import prediction_service
 
-predictionRouter = APIRouter()
-security = HTTPBearer()
-from pyspark.sql import SparkSession
+predictionRouter = APIRouter(prefix='/predictions', tags=['Predictions'])
 
-spark = SparkSession.builder \
-    .appName("TaxiETAInference") \
-    .getOrCreate()
-MODEL_VERSION: str = "v1.0"
-FEATURES = [
-    'passenger_count',
-    'trip_distance',
-    'RatecodeID',
-    'fare_amount',
-    'tip_amount',
-    'tolls_amount',
-    'Airport_fee',
-    'pickup_hour'
-]
 
-from pyspark.ml import PipelineModel
-
-MODEL_PATH = "notebooks/models/GradientBoostedTrees_model"
-
-model = PipelineModel.load(MODEL_PATH)
-
-@predictionRouter.post("/predict", response_model=PredictionResponse)
-def predict_eta(
-    features: TripFeatures,
-    user: dict = Depends(get_current_user),
-    db: Session = Depends(get_db)
+@predictionRouter.get('/', response_model=List[PredictionOut])
+def list_predictions(
+    date_from:    Optional[date] = None,
+    date_to:      Optional[date] = None,
+    rate_tier:    Optional[str]  = None,
+    data_quality: Optional[str]  = None,
+    limit:        int            = 365,
+    db:           Session        = Depends(get_db),
+    current_user: User           = Depends(get_current_user),
 ):
-    # Vérifier que le modèle est chargé
-    if model is None: 
-        raise HTTPException(status_code=503, detail="Modèle non disponible")
-    
-    try:
-        # Créer DataFrame avec Spark
-        data = [(
-            features.passenger_count,
-            features.trip_distance,
-            features.RatecodeID,
-            features.fare_amount,
-            features.tip_amount,
-            features.tolls_amount,
-            features.Airport_fee,
-            features.pickup_hour
-        )]
-        
-        df = spark.createDataFrame(data, FEATURES)  
-        # Prédiction
-        result = model.transform(df)  # ← Utilise model importé
-        duration = float(result.select("prediction").first()[0])
-        # Logger dans PostgreSQL
-        timestamp = datetime.now()
-        log_query = text("""
-           INSERT INTO eta_predictions (
-    passenger_count,
-    trip_distance,
-    ratecode_id,
-    fare_amount,
-    tip_amount,
-    tolls_amount,
-    airport_fee,
-    trip_duration,
-    pickup_hour,
-    predicted_duration,
-    model_version,
-    username
-)
-VALUES (
-    :p, :d, :r, :f, :t, :toll, :air, :dur, :h, :pred, :v, :u
-)
-        """)
-        
-        db.execute(log_query, {
-            "p": features.passenger_count,
-            "d": features.trip_distance,
-            "r": features.RatecodeID,
-            "f": features.fare_amount,
-            "t": features.tip_amount,
-            "toll": features.tolls_amount,
-            "air": features.Airport_fee,
-            "dur": round(duration, 2),
-            "h": features.pickup_hour,
-            "pred": duration,
-            "v": MODEL_VERSION,
-            "ts": timestamp,
-            "u": user.id
-        })
-        db.commit()
-        
-        return PredictionResponse(
-            estimated_duration=round(duration, 2),
-            model_version=MODEL_VERSION,
-            timestamp=timestamp.isoformat()
-        )
-        
-    except Exception as e:
-        db.rollback()
-        raise HTTPException(
-            status_code=500,
-            detail=f"Erreur prédiction: {str(e)}"
-        )
+    """
+    Return predictions from the latest promoted model run.
+
+    - **rate_tier**: promotional | value | standard | high | premium
+    - **data_quality**: high | medium | low (based on days ahead)
+    """
+    if not prediction_service.get_latest_run_id(db):
+        raise HTTPException(404, 'No promoted model run found')
+    return prediction_service.get_predictions(
+        db, date_from, date_to, rate_tier, data_quality, limit
+    )
+
+
+@predictionRouter.get('/{target_date}', response_model=PredictionOut)
+def get_prediction(
+    target_date:  date,
+    db:           Session = Depends(get_db),
+    current_user: User    = Depends(get_current_user),
+):
+    """Full prediction detail for a single date including all adjustment columns."""
+    pred = prediction_service.get_prediction_by_date(db, target_date)
+    if not pred:
+        raise HTTPException(404, f'No prediction found for {target_date}')
+    return pred

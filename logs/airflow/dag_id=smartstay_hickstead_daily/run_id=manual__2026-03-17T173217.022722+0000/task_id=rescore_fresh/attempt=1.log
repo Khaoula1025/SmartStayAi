@@ -1,0 +1,53 @@
+[2026-03-17T17:32:21.555+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-17T17:32:21.648+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: smartstay_hickstead_daily.rescore_fresh manual__2026-03-17T17:32:17.022722+00:00 [queued]>
+[2026-03-17T17:32:21.665+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: smartstay_hickstead_daily.rescore_fresh manual__2026-03-17T17:32:17.022722+00:00 [queued]>
+[2026-03-17T17:32:21.665+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2026-03-17T17:32:21.684+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): rescore_fresh> on 2026-03-17 17:32:17.022722+00:00
+[2026-03-17T17:32:21.689+0000] {standard_task_runner.py:63} INFO - Started process 929 to run task
+[2026-03-17T17:32:21.693+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'smartstay_hickstead_daily', 'rescore_fresh', 'manual__2026-03-17T17:32:17.022722+00:00', '--job-id', '95', '--raw', '--subdir', 'DAGS_FOLDER/09_airflow_dag.py', '--cfg-path', '/tmp/tmpx6f26hd9']
+[2026-03-17T17:32:21.695+0000] {standard_task_runner.py:91} INFO - Job 95: Subtask rescore_fresh
+[2026-03-17T17:32:21.889+0000] {task_command.py:426} INFO - Running <TaskInstance: smartstay_hickstead_daily.rescore_fresh manual__2026-03-17T17:32:17.022722+00:00 [running]> on host 5366d0f75f9a
+[2026-03-17T17:32:22.335+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='revenue@unhotels.co.uk' AIRFLOW_CTX_DAG_OWNER='smartstay' AIRFLOW_CTX_DAG_ID='smartstay_hickstead_daily' AIRFLOW_CTX_TASK_ID='rescore_fresh' AIRFLOW_CTX_EXECUTION_DATE='2026-03-17T17:32:17.022722+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-17T17:32:17.022722+00:00'
+[2026-03-17T17:32:22.336+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-17T17:32:23.382+0000] {daily_rescore.py:511} INFO - ============================================================
+[2026-03-17T17:32:23.383+0000] {daily_rescore.py:512} INFO - SmartStay — Daily Re-score
+[2026-03-17T17:32:23.384+0000] {daily_rescore.py:513} INFO - Window   : 2026-03-17 → 2026-05-16  (60 days)
+[2026-03-17T17:32:23.384+0000] {daily_rescore.py:514} INFO - Dry run  : False
+[2026-03-17T17:32:23.385+0000] {daily_rescore.py:515} INFO - ============================================================
+[2026-03-17T17:32:23.409+0000] {daily_rescore.py:93} INFO - Latest pickup file: Uno_Hotels_Pickup_16_03_2026.xlsx  (file date: 2026-03-17, staleness: 0d, quality: high)
+[2026-03-17T17:32:23.410+0000] {daily_rescore.py:529} INFO - 
+[Step 1] Parsing BOB features from Uno_Hotels_Pickup_16_03_2026.xlsx
+[2026-03-17T17:32:24.630+0000] {daily_rescore.py:114} INFO -   Pickup file shape: (2557, 14)
+[2026-03-17T17:32:24.635+0000] {daily_rescore.py:132} INFO -   Raw file unparseable — falling back to clean_pickup.csv
+[2026-03-17T17:32:24.668+0000] {daily_rescore.py:533} INFO - 
+[Step 2] Building feature matrix (2026-03-17 → 2026-05-16)
+[2026-03-17T17:32:24.686+0000] {daily_rescore.py:176} INFO -   Rescore window: 61 dates (2026-03-17 → 2026-05-16)
+[2026-03-17T17:32:24.699+0000] {daily_rescore.py:195} INFO -   BOB features matched: 61/61 dates
+[2026-03-17T17:32:24.706+0000] {daily_rescore.py:537} INFO - 
+[Step 3] Loading production model
+[2026-03-17T17:32:27.978+0000] {daily_rescore.py:250} INFO -   Model loaded: gbm_model.joblib
+[2026-03-17T17:32:27.979+0000] {daily_rescore.py:252} INFO -   RF loaded:    rf_model.joblib
+[2026-03-17T17:32:27.979+0000] {daily_rescore.py:541} INFO - 
+[Step 4] Running Stage 1 + Stage 2 predictions
+[2026-03-17T17:32:28.052+0000] {daily_rescore.py:545} INFO - 
+[Step 5] Assembling output + rate recommendations
+[2026-03-17T17:32:28.061+0000] {daily_rescore.py:549} INFO - 
+[Step 6] Writing results (dry_run=False)
+[2026-03-17T17:32:28.292+0000] {daily_rescore.py:479} INFO -   DB upsert: 61 rows written (run_id=1af4cd78...)
+[2026-03-17T17:32:28.314+0000] {daily_rescore.py:496} INFO -   CSV saved → rescore_2026-03-17.csv
+[2026-03-17T17:32:28.315+0000] {daily_rescore.py:554} INFO - 
+============================================================
+[2026-03-17T17:32:28.316+0000] {daily_rescore.py:555} INFO - Re-score COMPLETE
+[2026-03-17T17:32:28.316+0000] {daily_rescore.py:556} INFO -   Dates scored   : 61
+[2026-03-17T17:32:28.317+0000] {daily_rescore.py:557} INFO -   BOB quality    : high (staleness: 0d)
+[2026-03-17T17:32:28.318+0000] {daily_rescore.py:558} INFO -   Rows in DB     : 61
+[2026-03-17T17:32:28.319+0000] {daily_rescore.py:559} INFO -   Avg predicted  : 51.3%
+[2026-03-17T17:32:28.323+0000] {daily_rescore.py:560} INFO -   Rate tiers     : {'value': 31, 'promotional': 26, 'standard': 4}
+[2026-03-17T17:32:28.324+0000] {daily_rescore.py:561} INFO - ============================================================
+[2026-03-17T17:32:28.326+0000] {09_airflow_dag.py:110} INFO - Rescore result: {'run_id': '1af4cd78-ed3f-4473-898a-c8661d26c823', 'dates_scored': 61, 'bob_quality': 'high', 'rows_written': 61, 'avg_predicted_occ': 0.5131}
+[2026-03-17T17:32:28.327+0000] {python.py:237} INFO - Done. Returned value was: {'run_id': '1af4cd78-ed3f-4473-898a-c8661d26c823', 'dates_scored': 61, 'bob_quality': 'high', 'rows_written': 61, 'avg_predicted_occ': 0.5131}
+[2026-03-17T17:32:28.327+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-17T17:32:28.484+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=smartstay_hickstead_daily, task_id=rescore_fresh, run_id=manual__2026-03-17T17:32:17.022722+00:00, execution_date=20260317T173217, start_date=20260317T173221, end_date=20260317T173228
+[2026-03-17T17:32:28.570+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-17T17:32:28.850+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-17T17:32:28.859+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

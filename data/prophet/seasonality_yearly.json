@@ -1,0 +1,74 @@
+[
+  {
+    "month": 1,
+    "month_name": "Jan",
+    "value": -0.4937,
+    "effect_pp": -49.37
+  },
+  {
+    "month": 2,
+    "month_name": "Feb",
+    "value": -0.1052,
+    "effect_pp": -10.53
+  },
+  {
+    "month": 3,
+    "month_name": "Mar",
+    "value": 0.0017,
+    "effect_pp": 0.17
+  },
+  {
+    "month": 4,
+    "month_name": "Apr",
+    "value": -0.0241,
+    "effect_pp": -2.42
+  },
+  {
+    "month": 5,
+    "month_name": "May",
+    "value": 0.1344,
+    "effect_pp": 13.44
+  },
+  {
+    "month": 6,
+    "month_name": "Jun",
+    "value": 0.1249,
+    "effect_pp": 12.48
+  },
+  {
+    "month": 7,
+    "month_name": "Jul",
+    "value": 0.2729,
+    "effect_pp": 27.29
+  },
+  {
+    "month": 8,
+    "month_name": "Aug",
+    "value": 0.1378,
+    "effect_pp": 13.77
+  },
+  {
+    "month": 9,
+    "month_name": "Sep",
+    "value": 0.2391,
+    "effect_pp": 23.91
+  },
+  {
+    "month": 10,
+    "month_name": "Oct",
+    "value": 0.071,
+    "effect_pp": 7.1
+  },
+  {
+    "month": 11,
+    "month_name": "Nov",
+    "value": -0.1198,
+    "effect_pp": -11.99
+  },
+  {
+    "month": 12,
+    "month_name": "Dec",
+    "value": -0.2385,
+    "effect_pp": -23.85
+  }
+]

@@ -1,0 +1,51 @@
+[
+  {
+    "dow": 0,
+    "day_name": "Monday",
+    "day_short": "Mon",
+    "value": 0.0331,
+    "effect_pp": 3.31
+  },
+  {
+    "dow": 1,
+    "day_name": "Tuesday",
+    "day_short": "Tue",
+    "value": 0.1459,
+    "effect_pp": 14.59
+  },
+  {
+    "dow": 2,
+    "day_name": "Wednesday",
+    "day_short": "Wed",
+    "value": 0.1361,
+    "effect_pp": 13.61
+  },
+  {
+    "dow": 3,
+    "day_name": "Thursday",
+    "day_short": "Thu",
+    "value": -0.0278,
+    "effect_pp": -2.78
+  },
+  {
+    "dow": 4,
+    "day_name": "Friday",
+    "day_short": "Fri",
+    "value": -0.0499,
+    "effect_pp": -4.99
+  },
+  {
+    "dow": 5,
+    "day_name": "Saturday",
+    "day_short": "Sat",
+    "value": 0.1216,
+    "effect_pp": 12.16
+  },
+  {
+    "dow": 6,
+    "day_name": "Sunday",
+    "day_short": "Sun",
+    "value": -0.359,
+    "effect_pp": -35.9
+  }
+]

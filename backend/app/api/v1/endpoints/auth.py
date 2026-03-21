@@ -44,8 +44,8 @@ async def login(response: Response, user: UserLogin, db: Session = Depends(get_d
         key='access_token',
         value=token['access_token'],
         httponly=True,
-        samesite='none',
-        secure=True,
+        samesite='lax',   # works over HTTP
+        secure=False, 
     )
 
     return {"message": "Login successful"}
@@ -63,12 +63,12 @@ async def logout(response: Response):
 
 
 @authRouter.get('/verifyToken')
-def verifyToken(current_user: str = Depends(get_current_user)):
-
-    if not current_user:
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Invalid username or password"
-        )
-
-    return {'message': 'success'}
+def verifyToken(current_user: User = Depends(get_current_user)):
+    return {
+        'message': 'success',
+        'user': {
+            'username': current_user.username,
+            'email': current_user.email,
+            'role': current_user.role if hasattr(current_user, 'role') else 'admin'
+        }
+    }
