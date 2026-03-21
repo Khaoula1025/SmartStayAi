@@ -5,7 +5,6 @@ on:
 
 jobs:
   test:
-    name: Run pytest
     runs-on: ubuntu-latest
 
     services:
@@ -24,40 +23,25 @@ jobs:
           --health-retries 5
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Install uv
-        run: pip install uv
+      - run: pip install uv && uv sync
 
-      - name: Install dependencies
-        run: uv sync
-
-      - name: Create backend/.env for CI
+      - name: Write .env
         run: |
-          printf '%s\n' \
-            'POSTGRES_USER=postgres' \
-            'POSTGRES_PASSWORD=0000' \
-            'POSTGRES_PORT=5432' \
-            'SMARTSTAY_DB=SmartStayAi' \
-            'AIRFLOW_DB=airflow' \
-            'AIRFLOW_ADMIN_USER=admin' \
-            'AIRFLOW_ADMIN_PASSWORD=admin123' \
-            'AIRFLOW_FERNET_KEY=ci_fernet_key' \
-            'AIRFLOW_SECRET_KEY=ci_secret_key' \
-            'GOOGLE_API_KEY=ci_placeholder' \
-            'APIFY_TOKEN=ci_placeholder' \
-            'secret=test_secret_key_for_ci' \
-            > backend/.env
-          echo "backend/.env written:"
+          echo "DB_USER=postgres"       > backend/.env
+          echo "DB_PASSWORD=0000"      >> backend/.env
+          echo "DB_HOST=localhost"     >> backend/.env
+          echo "DB_PORT=5432"          >> backend/.env
+          echo "DB_NAME=SmartStayAi"   >> backend/.env
+          echo "secret=ci_secret_key"  >> backend/.env
           cat backend/.env
 
-      - name: Create DB tables and seed test user
+      - name: Seed DB
         run: |
           uv run python -c "
           import sys; sys.path.insert(0, 'backend')
@@ -67,12 +51,11 @@ jobs:
           Base.metadata.create_all(bind=engine)
           db = SessionLocal()
           if not db.query(User).filter(User.username == 'test').first():
-              db.add(User(username='test', email='test@smartstay.com', password=hash_password('12345678')))
+              db.add(User(username='test', email='test@ci.com', password=hash_password('12345678')))
               db.commit()
           db.close()
-          print('DB seeded successfully')
+          print('DB seeded')
           "
 
-      - name: Run pytest
-        run: |
-          PYTHONUTF8=1 uv run pytest tests/test_api.py -v --tb=short
+      - name: Run tests
+        run: PYTHONUTF8=1 uv run pytest tests/test_api.py -v --tb=short
