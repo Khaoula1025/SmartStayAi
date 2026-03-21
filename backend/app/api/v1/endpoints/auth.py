@@ -44,8 +44,8 @@ async def login(response: Response, user: UserLogin, db: Session = Depends(get_d
         key='access_token',
         value=token['access_token'],
         httponly=True,
-        samesite='none',
-        secure=True,
+        samesite='lax',   # works over HTTP
+        secure=False, 
     )
 
     return {"message": "Login successful"}

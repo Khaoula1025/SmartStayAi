@@ -55,6 +55,7 @@ dependencies = [
     "vadersentiment>=3.3.2",
     "google-generativeai>=0.8.6",
     "mlflow>=3.9.0",
+    "lightgbm>=4.6.0",
 ]
 
 [project.optional-dependencies]
@@ -174,4 +175,11 @@ exclude_lines = [
     "if TYPE_CHECKING:",
     "class .*\\bProtocol\\):",
     "@(abc\\.)?abstractmethod",
+]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=9.0.2",
+    "pytest-cov>=7.0.0",
 ]

@@ -1,0 +1,23 @@
+artifact_path: file:///C:/Users/user/Desktop/smartstay-intelligence/mlruns/1/models/m-2a1c26be99fa4c06a251fe5749d1252e/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.11.9
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.8.0
+    skops_trusted_types: null
+mlflow_version: 3.9.0
+model_id: m-2a1c26be99fa4c06a251fe5749d1252e
+model_size_bytes: 1725447
+model_uuid: m-2a1c26be99fa4c06a251fe5749d1252e
+prompts: null
+run_id: 1ec92428eecc4ff88add76ca56ccc8dd
+utc_time_created: '2026-03-18 17:20:04.332193'
