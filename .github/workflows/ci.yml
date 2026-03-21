@@ -8,15 +8,6 @@ jobs:
     name: Run pytest
     runs-on: ubuntu-latest
 
-    env:
-      PYTHONUTF8: "1"
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: "0000"
-      POSTGRES_PORT: "5432"
-      SMARTSTAY_DB: SmartStayAi
-      AIRFLOW_DB: airflow
-      secret: test_secret_key_for_ci
-
     services:
       postgres:
         image: postgres:15
@@ -47,25 +38,39 @@ jobs:
       - name: Install dependencies
         run: uv sync
 
+      - name: Create backend/.env for CI
+        run: |
+          cat > backend/.env << 'ENVEOF'
+          POSTGRES_USER=postgres
+          POSTGRES_PASSWORD=0000
+          POSTGRES_PORT=5432
+          SMARTSTAY_DB=SmartStayAi
+          AIRFLOW_DB=airflow
+          AIRFLOW_ADMIN_USER=admin
+          AIRFLOW_ADMIN_PASSWORD=admin123
+          AIRFLOW_FERNET_KEY=ci_fernet_key
+          AIRFLOW_SECRET_KEY=ci_secret_key
+          GOOGLE_API_KEY=ci_placeholder
+          APIFY_TOKEN=ci_placeholder
+          secret=test_secret_key_for_ci
+          ENVEOF
+
       - name: Create DB tables and seed test user
         run: |
           uv run python -c "
           import sys; sys.path.insert(0, 'backend')
-          from app.db.session import engine
+          from app.db.session import engine, Base, SessionLocal
           from app.models.user import User
-          from sqlalchemy.orm import declarative_base
-          from app.db.session import Base
-          Base.metadata.create_all(bind=engine)
-          from app.db.session import SessionLocal
           from app.core.security import hash_password
+          Base.metadata.create_all(bind=engine)
           db = SessionLocal()
           if not db.query(User).filter(User.username == 'test').first():
               db.add(User(username='test', email='test@smartstay.com', password=hash_password('12345678')))
               db.commit()
           db.close()
-          print('DB seeded')
+          print('DB seeded successfully')
           "
 
-      - name: Run pytest (API tests only — model files not available in CI)
+      - name: Run pytest
         run: |
-          uv run pytest tests/test_api.py -v --tb=short
+          PYTHONUTF8=1 uv run pytest tests/test_api.py -v --tb=short
