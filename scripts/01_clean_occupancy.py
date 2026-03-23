@@ -3,9 +3,6 @@ import numpy as np
 import warnings
 warnings.filterwarnings('ignore')
 
-# ─────────────────────────────────────────────────────────────────────────────
-# CONFIG
-# ─────────────────────────────────────────────────────────────────────────────
 FILE_2024   = 'data/raw/UNOHICK_Occupancy_20260227_235408.xlsx'
 FILE_2025   = 'data/raw/UNOHICK_Occupancy_20260227_235324.xlsx'
 OUTPUT      = 'data/processed/clean_occupancy_5.csv'
