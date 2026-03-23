@@ -7,17 +7,19 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     gcc g++ libpq-dev curl \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Install uv
 RUN pip install uv
 
 # Copy dependency files
 COPY pyproject.toml uv.lock* ./
 
-# Install dependencies using uv
-RUN uv sync --frozen --no-dev
+# Create dummy README so hatchling doesn't complain
+RUN touch README.md
 
-# Copy app source
-COPY . .
+# Install only dependencies, not the project itself
+RUN uv sync --frozen --no-dev --no-install-project
+
+# Copy backend app source
+COPY backend/ ./
 
 EXPOSE 8000
 
