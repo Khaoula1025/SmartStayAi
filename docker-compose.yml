@@ -1,78 +1,87 @@
 x-airflow-common: &airflow-common
   build:
-    context: ./airflow          # ← your airflow/ folder
+    context: ./airflow
     dockerfile: Dockerfile
   env_file:
     - ./backend/.env
   environment: &airflow-env
-    # ── Airflow core ────────────────────────────────────────────────────
     AIRFLOW__CORE__EXECUTOR: LocalExecutor
     AIRFLOW__CORE__FERNET_KEY: ${AIRFLOW_FERNET_KEY}
     AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: "true"
     AIRFLOW__CORE__LOAD_EXAMPLES: "false"
     AIRFLOW__CORE__DEFAULT_TIMEZONE: UTC
     AIRFLOW__CORE__DAGS_FOLDER: /opt/airflow/dags
-
-    # ── Airflow metadata DB ──────────────────────────────────────────────
-    # Points at your LOCAL postgres (host.docker.internal = localhost from container)
     AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: >-
       postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@host.docker.internal:${POSTGRES_PORT}/${AIRFLOW_DB}
-
-    # ── Airflow webserver ────────────────────────────────────────────────
     AIRFLOW__WEBSERVER__SECRET_KEY: ${AIRFLOW_SECRET_KEY}
     AIRFLOW__WEBSERVER__EXPOSE_CONFIG: "true"
-
-    # ── Airflow admin user (used by airflow-init) ────────────────────────
     _AIRFLOW_WWW_USER_USERNAME: ${AIRFLOW_ADMIN_USER}
     _AIRFLOW_WWW_USER_PASSWORD: ${AIRFLOW_ADMIN_PASSWORD}
-
-    # ── SmartStay paths inside the container ────────────────────────────
     SMARTSTAY_PROJECT_ROOT: /opt/smartstay
     RAW_DIR:        /opt/smartstay/data/raw
     PROCESSED_DIR:  /opt/smartstay/data/processed
     PREDICTION_DIR: /opt/smartstay/data/prediction
     MODELS_DIR:     /opt/smartstay/data/models
     LOGS_DIR:       /opt/smartstay/logs/pipeline
-
-    # ── SmartStay DB (your local postgres, same host trick) ──────────────
     DB_HOST:     host.docker.internal
     DB_PORT:     ${POSTGRES_PORT}
     DB_NAME:     ${SMARTSTAY_DB}
     DB_USER:     ${POSTGRES_USER}
     DB_PASSWORD: ${POSTGRES_PASSWORD}
-
-    # ── Python path so config.py + scripts/ are importable ──────────────
     PYTHONPATH: /opt/smartstay
-
-    # ── Logging ──────────────────────────────────────────────────────────
     AIRFLOW__LOGGING__BASE_LOG_FOLDER: /opt/airflow/logs
     AIRFLOW__LOGGING__LOG_LEVEL: INFO
-
   volumes:
-    # Project root mounted at /opt/smartstay (read-only — source code)
     - .:/opt/smartstay:ro
-
-    # Data folder is read-write (scripts write CSVs, models here)
     - ./data:/opt/smartstay/data
-
-    # DAGs — your airflow/dags/ folder
     - ./airflow/dags:/opt/airflow/dags
-
-    # Airflow task logs
     - ./logs/airflow:/opt/airflow/logs
-
-    # Plugins (empty for now)
     - ./airflow/plugins:/opt/airflow/plugins
-
   extra_hosts:
-    # Makes "host.docker.internal" resolve to your machine's localhost
-    # Required on Linux. Works out of the box on Mac/Windows Docker Desktop.
     - "host.docker.internal:host-gateway"
 
 
 services:
 
-  # ── Airflow init (runs once then exits) ──────────────────────────────────
+  # ── FastAPI Backend ─────────────────────────────────────────────────────────
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: smartstay-backend
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./backend/.env
+    environment:
+      DB_HOST: host.docker.internal   # your local PostgreSQL
+    volumes:
+      - ./data:/app/data              # models, predictions, shap, sentiment
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  # ── Next.js Frontend ────────────────────────────────────────────────────────
+  frontend:
+    build:
+      context: ./frontend            # adjust path if your Next.js lives elsewhere
+      dockerfile: Dockerfile
+    container_name: smartstay-frontend
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_API_URL: http://backend:8000   # internal service name
+    depends_on:
+      backend:
+        condition: service_healthy
+
+  # ── Airflow Init ────────────────────────────────────────────────────────────
   airflow-init:
     <<: *airflow-common
     container_name: smartstay-airflow-init
@@ -82,20 +91,17 @@ services:
     command:
       - -c
       - |
-        echo "Waiting for database..."
         airflow db migrate
         airflow users create \
           --username "$${_AIRFLOW_WWW_USER_USERNAME}" \
           --password "$${_AIRFLOW_WWW_USER_PASSWORD}" \
-          --firstname Admin \
-          --lastname SmartStay \
-          --role Admin \
-          --email "admin@smartstay.local" || true
+          --firstname Admin --lastname SmartStay \
+          --role Admin --email "admin@smartstay.local" || true
         airflow variables set SMARTSTAY_PROJECT_ROOT /opt/smartstay || true
-        echo "✅ Airflow init complete"
+        echo " Airflow init complete"
     restart: "no"
 
-  # ── Airflow webserver ─────────────────────────────────────────────────────
+  # ── Airflow Webserver ───────────────────────────────────────────────────────
   airflow-webserver:
     <<: *airflow-common
     container_name: smartstay-airflow-webserver
@@ -115,7 +121,7 @@ services:
       airflow-init:
         condition: service_completed_successfully
 
-  # ── Airflow scheduler ─────────────────────────────────────────────────────
+  # ── Airflow Scheduler ───────────────────────────────────────────────────────
   airflow-scheduler:
     <<: *airflow-common
     container_name: smartstay-airflow-scheduler
@@ -123,15 +129,6 @@ services:
       - ./backend/.env
     restart: unless-stopped
     command: scheduler
-    healthcheck:
-      test: ["CMD", "airflow", "jobs", "check", "--job-type", "SchedulerJob"]
-      interval: 30s
-      timeout: 10s
-      retries: 5
-      start_period: 30s
     depends_on:
       airflow-init:
         condition: service_completed_successfully
-
-
-# No postgres volume needed — using your local postgres
