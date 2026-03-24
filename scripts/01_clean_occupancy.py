@@ -468,6 +468,6 @@ check("is_interpolated 0 or 1",df['is_interpolated'].isin([0,1]).all())
 print()
 print(f"  {passed} checks passed, {failed} checks failed")
 if failed == 0:
-    print("  🎉 All checks passed — clean_occupancy.csv is ready")
+    print("All checks passed — clean_occupancy.csv is ready")
 else:
-    print("  ⚠️  Fix failures before proceeding")
+    print("Fix failures before proceeding")
